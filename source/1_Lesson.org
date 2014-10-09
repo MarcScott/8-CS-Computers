@@ -75,3 +75,62 @@
 :HTML_CONTAINER_CLASS: save
 :END:
 
+* What is a computer?
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- Data is a collection of facts, such as values or measurements.
+- It can be numbers, words, measurements, observations or even just descriptions of things
+- A computer is an electronic device that can store, retrieve, and process data.
+** Research It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+- Computers are composed of Hardware and Software.
+- Use the web to find definitions of Hardware and Software and examples of each.
+** Document It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: document
+:END:
+- You're going to write your project up using Markdown.
+- Like HTML, Markdown is a markup language (Confusing names are common in computing)
+- You can write in markdown and then use a parser to convert it to other formats such as HTML, PDF or even docx.
+- Open up this document with a text editor.
+- 
+* Input devices
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+* Output devices
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+* Non-Volatile Storage
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+
+* Volatile Storage
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+
+* The Fetch-Execute Cycle
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+
+* Operating Systems
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+
+* The future of computers
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+

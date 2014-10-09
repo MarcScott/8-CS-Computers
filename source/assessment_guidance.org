@@ -1,0 +1,99 @@
+#+STARTUP:indent
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil  
+#+TITLE: How A Computer Works
+#+AUTHOR: Marc Scott
+
+#+BEGIN_HTML
+<div class=ribbon>
+<a href="https://github.com/MarcScott/8-CS-Computers">Fork me on GitHub</a>
+</div>
+#+END_HTML
+
+* COMMENT Use as a template
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+
+** Research It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+
+** Design It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: design
+:END:
+
+** Build It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: build
+:END:
+
+** Test It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: test
+:END:
+
+** Run It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: run
+:END:
+
+** Document It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: document
+:END:
+
+** Code It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+
+** Program It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: program
+:END:
+
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+
+** Save It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: save
+:END:
+* Badge criteria guidance
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** MarkIt
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: document
+:END:
+- Below guidance has been provided for the award of badges.
+| <20>                 | <20>                 | <20>                 | <20>                 |
+| Criteria             | Silver               | Gold                 | Platinum             |
+|----------------------+----------------------+----------------------+----------------------|
+| What is a Computer   | Assemble the storage box with a resonable degree of precision | Assemble the box neatly, with little or no excess glue, and all the parts neatly mated together |                      |
+|----------------------+----------------------+----------------------+----------------------|
+| Input and Output     | Design a simple name-plate to go onto the box | Design a name plate with a graphic, and a more intricate shape than a rectangle | Independently use the laser cutter to produce a name-plate |
+|----------------------+----------------------+----------------------+----------------------|
+| Storage              | Use SolidWorks to mate three pieces of the storage box together correctly. | Create the entire storage box assembly. | Use movement constraints to ensure the box closes neatly. |
+|----------------------+----------------------+----------------------+----------------------|
+| Processors           | Create a sketch and fully define it for a 3D shape of given dimensions | Fully define a part for the storage box. |                      |
+|----------------------+----------------------+----------------------+----------------------|
+| Operating Systems    | Identify different materials that a storage box could be made from. | Critically evaluate pre-existing storage solutions. |                      |
+|----------------------+----------------------+----------------------+----------------------|
+| The future           | Explain why is is important to test a product. | Identify areas of strength and weakness of your storage box, and suggest an improvement. |                      |
