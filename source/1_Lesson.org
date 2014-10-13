@@ -91,16 +91,102 @@
 :HTML_CONTAINER_CLASS: research
 :END:
 - Computers are composed of Hardware and Software.
-- Use the web to find definitions of Hardware and Software and examples of each.
+- Use the web to find definitions of Hardware and Software and examples of each. Keep a note of what you find out. You're going to need to write it up.
 ** Document It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: document
 :END:
 - You're going to write your project up using Markdown.
 - Like HTML, Markdown is a markup language (Confusing names are common in computing)
-- You can write in markdown and then use a parser to convert it to other formats such as HTML, PDF or even docx.
-- Open up this document with a text editor.
-- 
+- You can write in Markdown and then use a parser to convert it to other formats such as HTML, PDF or even docx.
+* Using Markdown
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:      
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- Markdown has it's own syntax - /an arrangement of words and symbols specific to a language./
+- The best way to learn Markdown is to write some.
+- Use a text editor to create a new document and call it Markdown-Cheatsheet.md
+- Now let's write a line of Markdown.
+#+BEGIN_SRC markdown
+# This is a level 1 heading
+#+END_SRC
+- Now save the file.
+- We'll need to use a parser to turn our markdown into something else. Your teacher will show you how to do this.
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- So that's level 1 headings sorted. Let's add some more Markdown to our document. You can copy and paste this if you like.
+#+BEGIN_SRC markdown
+## This is a level 2 heading
+### Obviously this is level 3
+
+Unordered lists are cool
+
++ Here's the first bullet
++ And the second
++ Okay, let's have three
+
+As are ordered lists
+
+1. A numbered list would be good
+1. It doesn't matter what numbers you used.
+1. In Markdown the sequence will climb by one
+9. Even if you add weird numbers
+6. Like this
+
+We can add horizontal rules like this 
+
+- - -
+
+And we can get code blocks by using tabs (or 4 spaces)
+
+    var i = 10;
+    console.log('Some statement')
+
+Sometimes it's nice to get a *little* emphasis, though sometimes you want a **lot**
+
+Sometimes we might want a link
+
+[Daring Fireball Markdown Syntax](http://daringfireball.net/projects/markdown/syntax)
+
+Sometimes we might want an image
+
+![Daring Fireball Logo](http://daringfireball.net/graphics/logos/)
+
+#+END_SRC
+- Send the document through your parser and have a look at the result. Keep hold of this document as it'll be a good reference guid for you in the future.
+* Starting your projects
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:      
+- [[file:doc/How-Computers-Work.md][Download this file]]
+- You can use this as a guide for your write up.
+- Open it up in a text editor and have a quick scan through
+* Assessment
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Badge It - Silver
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+- Edit the top of the document show the correct author and date
+- Add a description for Hardware and Software in the appropriate places
+** Badge It - Gold
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END
+- Include links and images into your descriptions for Hardware and Software, as well as ensuring your descriptions include examples.
+** Badge It - Platinum
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END
+- Wow your teacher with your thorough understanding of the varieties of hardware and software, and show a deep understanding of what the two things are.
 * Input devices
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
