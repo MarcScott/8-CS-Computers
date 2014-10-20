@@ -175,48 +175,17 @@ Sometimes we might want an image
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- Edit the top of the document show the correct author and date
+- Edit the top of the document to show the correct author and date
 - Add a description for Hardware and Software in the appropriate places
+- Run the document through your parser and show the output to your teacher.
 ** Badge It - Gold
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
-:END
+:END:
 - Include links and images into your descriptions for Hardware and Software, as well as ensuring your descriptions include examples.
 ** Badge It - Platinum
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
-:END
+:END:
 - Wow your teacher with your thorough understanding of the varieties of hardware and software, and show a deep understanding of what the two things are.
-* Input devices
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: activity
-:END:
-* Output devices
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: activity
-:END:
-* Non-Volatile Storage
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: activity
-:END:
-
-* Volatile Storage
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: activity
-:END:
-
-* The Fetch-Execute Cycle
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: activity
-:END:
-
-* Operating Systems
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: activity
-:END:
-
-* The future of computers
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: activity
-:END:
 

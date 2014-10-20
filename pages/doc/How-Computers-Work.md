@@ -8,16 +8,28 @@
 - A **computer** is an electronic device that can store, retrieve, and process data.
 ![A Computer](http://www.buffalocomputerconsulting.com/images/computer.jpg)
 
-# What is Hardware?
+## What is Hardware?
 
-# What is Software?
+## What is Software?
 
-# What are Desktop Computers?
+# The different types of computers
 
-# What are Notebook Computers?
+## Embedded Computers
 
-# What are Mobile Computers?
+## Mobile Devices
 
-# What are Servers?
+## Microcomputers
 
-# 
+## Servers
+
+## Supercomputers
+
+# The CPU
+
+# Storage
+
+## Non-volatile storage
+
+## Volatile storage
+
+
