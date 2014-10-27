@@ -2,7 +2,7 @@
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="pages/css/styles.css"/>
 #+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
 #+OPTIONS: f:nil author:nil num:nil creator:nil timestamp:nil  
-#+TITLE: FruitBots
+#+TITLE: How Computers Work
 #+AUTHOR: Marc Scott
 
 
@@ -11,36 +11,20 @@
 <a href="https://github.com/MarcScott/7-CS-Internet">Fork me on GitHub</a>
 </div>
 #+END_HTML
-* [[file:pages/1_Lesson.html][Week 1 - Move your bot]]
+* [[file:pages/1_Lesson.html][Week 1 - Beautiful Binary]]
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: link-heading
 :END:
-* [[file:pages/2_lesson.html][Week 2 - Precision movement]]
+* [[file:pages/2_Lesson.html][Week 2 -Tiny Transistors and Nano NANDS]]
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: link-heading
-:END:
-* [[file:pages/3_lesson.html][Week 3 - Take that melon]]
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: link-heading
-:END:
-* [[file:pages/4_Lesson.html][Week 4 - Functions]]
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: link-heading
-:END:
-* [[file:pages/5_Lesson.html][Week 5 - Moving like a snake]]
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: link-heading
-:END:
-* [[file:pages/6_Lesson.html][Week 6 - The first rule of FruitBots]]
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: link-heading
-:END:
-* Extension 7 - Fruit Ninja
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: link-heading
-:END:
-* Extension 8 - Know thy enemy
+:END:      
+* [[file:pages/3_Lesson.html][Week 3 - CombiNANDS]]
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: link-heading
 :END:
 
+* [[file:pages/assessment_guidance.html][Assessment]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: link-heading
+:END:

@@ -82,18 +82,24 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: document
 :END:
+- Knows that digital computers use binary to represent all data. (AB)
+- Understands how bit patterns represent numbers. (AB)
+- Knows that computers transfer data in binary. (AB)
+- Understands the relationship between binary and file size (uncompressed). (AB)
+
+- Understands the von Neumann architecture in relation to the fetch- execute cycle, including how data is stored in memory. (AB) (GE)
+- Understands the basic function and operation of location addressable memory.(AB)
+- Performs simple operations using bit patterns e.g. binary addition. (AB) (AL)
+
+- Understands the relationship between binary and electrical circuits, including Boolean logic. (AB)
+
 - Below guidance has been provided for the award of badges.
-| <20>                 | <20>                 | <20>                 | <20>                 |
-| Criteria             | Silver               | Gold                 | Platinum             |
-|----------------------+----------------------+----------------------+----------------------|
-| What is a Computer   | Assemble the storage box with a resonable degree of precision | Assemble the box neatly, with little or no excess glue, and all the parts neatly mated together |                      |
-|----------------------+----------------------+----------------------+----------------------|
-| Input and Output     | Design a simple name-plate to go onto the box | Design a name plate with a graphic, and a more intricate shape than a rectangle | Independently use the laser cutter to produce a name-plate |
-|----------------------+----------------------+----------------------+----------------------|
-| Storage              | Use SolidWorks to mate three pieces of the storage box together correctly. | Create the entire storage box assembly. | Use movement constraints to ensure the box closes neatly. |
-|----------------------+----------------------+----------------------+----------------------|
-| Processors           | Create a sketch and fully define it for a 3D shape of given dimensions | Fully define a part for the storage box. |                      |
-|----------------------+----------------------+----------------------+----------------------|
-| Operating Systems    | Identify different materials that a storage box could be made from. | Critically evaluate pre-existing storage solutions. |                      |
-|----------------------+----------------------+----------------------+----------------------|
-| The future           | Explain why is is important to test a product. | Identify areas of strength and weakness of your storage box, and suggest an improvement. |                      |
+| <40>                                     | <40>                                     | <40>                                     | <40>                                     |
+|                                          | Silver                                   | Gold                                     | Platinum                                 |
+|------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------|
+| Beautiful Binary                         | Convert between binary and denary        | Convert between denary and binary        | Perform simple binary addition           |
+| Tiny Transistors and nano NANDS          | Understand that transistors can act as switches | Understand how transistors can form NAND gates | Draw transistor arrangements for other gates |
+| CombiNANDS                               | Predict outputs from simple NANDS combinations | Understand how NANDS can combine to form AND, OR and XOR gates | Understand how a D-Latch and adder work  |
+| Lovely Logic                             |                                          |                                          |                                          |
+| RAM                                      |                                          |                                          |                                          |
+| CPU operations                           |                                          |                                          |                                          |

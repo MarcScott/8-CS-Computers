@@ -74,36 +74,32 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: save
 :END:
-
-* Types of Computer
+* Transistors
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
-Computers come in many shapes and sizes, many of which you might not even recognise as being a computer.
-[[file:img/Montage.jpg]]
 ** Learn It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-- Modern computers are really hard to categorise as their are so many different types.
-- We can broadly try and fit a computer into one of the following categories, but some types of computer might blur the boundaries.
-  - Embedded computers - Small computers integrated into other technologies such as DVD players and Microwaves.
-  - Mobile Devices - Wearables, Smart Phones, Tablets, Handheld games consoles.
-  - Microcomputers - Desktops, Laptops and Notebooks, Games Consoles.
-  - Servers - larger computers used to 'serve' files, webpages and emails to client computers.
-  - Supercomputers - very powerful computers, usually dedicated to performing single types of tasks.
-** Research It
+- Transistors can come in many shapes and sizes.
+[[http://upload.wikimedia.org/wikipedia/commons/0/0e/Transistors-white.jpg]]
+- They all have something in common - three pins.
+- The transistors we find in computer chips and memory are much smaller - 22nm to be exact which is 0.000000022m
+[[file:img/22nm.jpg]]
+- The circuit diagram for a transistor is shown below, with the three pins labeled =B= for Base, =C= for Collector and =E= for Emitter.
+#+BEGIN_HTML
+<object data="js/transistor.html" width='200px' height='200px'></object>
+#+END_HTML
+- As mentioned in the previous lesson, a transistor can act like a switch. When there is current entering the Base(=B=) of the transistor, current is allowed to flow through the Collector(=C=) to the Emitter(=E=).
+** Try It
 :PROPERTIES:
-:HTML_CONTAINER_CLASS: research
+:HTML_CONTAINER_CLASS: try
 :END:
-- Use the web to find a description of each of the types of computer that are listed above.
-- Find a picture of each of the class of computer listed above
-** Document It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: document
-:END:
-- In your markdown document write a description and include a picture for each of the classes of computer above.
-- Make sure you understand what you are writing. Your teacher may ask you questions about what you have written to ensure you understand it.4
+- Have a play with the transistor below so you understand how applying a voltage to the base of a transistor is equivalent to turning on a switch.
+#+BEGIN_HTML
+<object data="js/transistor2.html" width='200px' height='200px'></object>
+#+END_HTML
 * Assessment
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
@@ -112,25 +108,84 @@ Computers come in many shapes and sizes, many of which you might not even recogn
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- Choose a type computer from one of the examples in the categories above.
-- You might choose Wearable computers or Mobile Phones for example.
-- Conduct some more in-depth research and document your findings in your Markdown file.
-- Try to find out about...
-  1. The popularity of the technology
-  2. The cost of the technology
-  3. The uses and features of the technology
+- In your own words write up a description of how a transistor can act as a switch. Make sure you are using the words /Collector/, /Base/, and /Emitter/.
+
+* NAND Gates
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+
+- We can combine transistors to make some pretty useful things. One combination of transistors is known as a NAND gate.
+- A NAND gate is made from two transistors combined as shown below.
+#+BEGIN_HTML
+<object data="js/TranNANDstatic.html" width='300px' height='320px'></object>
+#+END_HTML
+- The basic concept of this arrangement, is that if current *can't* flow through the collector and base of *both* resistors to /Earth/, then instead it will flow through the /OUT/
+- If both transistors allow current through their /Collector/ and /Emitter/, then no current will flow through /OUT/
+- Have a play with the arrangement below and make sure you understand how the NAND gate works.
+#+BEGIN_HTML
+<object data="js/TranNAND.html" width='300px' height='320px'></object>
+#+END_HTML
 ** Badge It - Gold
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
+- Below is a table showing the states that A and B can have, with a column left blank for the OUT (which has been labeled Q).
+| A | B | Q |
+|---+---+---|
+| 0 | 0 |   |
+| 1 | 0 |   |
+| 0 | 1 |   |
+| 1 | 1 |   | 
+- Copy the table and complete the column labeled Q. (An input or output is /ON/ (=1=), if it current is flowing through it (red)
+- Now copy and fill in the missing spaces in the description below.
+#+BEGIN_QUOTE
+_NAND GATES_
 
-- Include the following details...
-  1. The specifications of the technology (size, screen resolution, processor power, memory)
-  2. The software that runs on the technology
+NAND gates have two inputs (A and B) and an output (___). When A and B are both ____, then Q is ____. If either A or B are ____ then Q is ____. If A and B are both ____ then Q is ____.
+#+END_QUOTE 
 ** Badge It - Platinum
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- As security is important, to get your platinum badge, look into the security features of the device. Find out if there are any forms of malware that can affect it, how it protects the user's data, or whether the device can be hacked.
-
-
+- There is another arrangement of transistors that can produce a table as shown below.
+| A | B | Q |
+|---+---+---|
+| 0 | 0 | 0 |
+| 1 | 0 | 1 |
+| 0 | 1 | 1 |
+| 1 | 1 | 1 | 
+- Using any graphics package on your computer, try to draw the arrangement of transistors that would produce a table like this.
+* Assessment
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Badge It - Gold
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+- Below is a table showing the possible 
+* Assessment
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Badge It - Platinum
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+ 
+- Adding binary numbers is pretty much the same as adding denary numbers.
+  - 0 + 0 = 0
+  - 0 + 1 = 1
+  - 1 + 0 = 1
+  - 1 + 1 = 10 (or 0 and carry the 1)
+  - 1 + 1 + 1 = 11 (or 1 and carry the 1)
+- Try performing the following additions
+  - 100 + 11
+  - 100 + 100
+  - 100 + 1100
+  - 11001 + 10101

@@ -74,99 +74,161 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: save
 :END:
-
-* What is a computer?
+* Binary
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
+To understand a little about how computers work, you'll need to know about binary
 ** Learn It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
-:END:
-- Data is a collection of facts, such as values or measurements.
-- It can be numbers, words, measurements, observations or even just descriptions of things
-- A computer is an electronic device that can store, retrieve, and process data.
+:END: 
+- If you were asked to count to nine, then you'd probably do something along the lines of the following. (Click to reset)
+#+BEGIN_HTML
+<object data="js/countingToNine.html" width='600px' height='100px'></object>
+#+END_HTML
+- But what happens when you want to go higher than nine?
+- You suddenly run out of new numbers and have to reuse digits you've already used.
+#+BEGIN_HTML
+<object data="js/countingDenary.html" width='600px' height='100px'></object>
+#+END_HTML
+- The counting system we use is called base 10, often called /denary/. This means we have 10 unique numbers (0 up to 9). When we start counting and reach the number 9 and want to continue, we use a preceding 1 (to indicate that we have a single unit of 'tens'), and then start counting from 0 again.
+- You've probably not given much thought to why we count in 10's but a simple explanation has been provided by Georges Ifrah in his book /The Universal History of Numbers/.
+#+BEGIN_QUOTE
+Traces of the anthropomorphic origin of counting systems can be found in many languages. In the Ali language (Central Africa), for example, "five" and "ten" are respectively moro and mbouna: moro is actually the word for "hand" and mbouna is a contraction of moro ("five") and bouna, meaning "two" (thus "ten"="two hands").
+
+It is therefore very probable that the Indo-European, Semitic and Mongolian words for the first ten numbers derive from expressions related to finger-counting. But this is an unverifiable hypothesis, since the original meanings of the names of the numbers have been lost.
+#+END_QUOTE
+- What this basically means is that we're not 100% sure why we count in 10s, but it's probably because we have ten fingers.
 ** Research It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: research
 :END:
-- Computers are composed of Hardware and Software.
-- Use the web to find definitions of Hardware and Software and examples of each. Keep a note of what you find out. You're going to need to write it up.
-** Document It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: document
-:END:
-- You're going to write your project up using Markdown.
-- Like HTML, Markdown is a markup language (Confusing names are common in computing)
-- You can write in Markdown and then use a parser to convert it to other formats such as HTML, PDF or even docx.
-* Using Markdown
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: activity
-:END:      
+- Not all cultures count using base 10.
+- Conduct some research online to see if you can find out about other numbering systems used by other cultures.
 ** Learn It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
-:END:
-- Markdown has it's own syntax - /an arrangement of words and symbols specific to a language./
-- The best way to learn Markdown is to write some.
-- Use a text editor to create a new document and call it Markdown-Cheatsheet.md
-- Now let's write a line of Markdown.
-#+BEGIN_SRC markdown
-# This is a level 1 heading
-#+END_SRC
-- Now save the file.
-- We'll need to use a parser to turn our markdown into something else. Your teacher will show you how to do this.
+:END: 
+- Computers *don't use base 10*
+- Computers chips are basically constructed from transistors that are organised to act as switches.
+- You'll learn more about transistors in the next lesson, but for now think of each transistor as a switch. I can be /ON/ or /OFF/ (in much the same way as a light-switch can). 
+- This means that computers use a base 2 numbering system, called *binary*. /ON/ is represented by the number 1 and /OFF/ is represented by the number 0.
 ** Learn It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
-:END:
-- So that's level 1 headings sorted. Let's add some more Markdown to our document. You can copy and paste this if you like.
-#+BEGIN_SRC markdown
-## This is a level 2 heading
-### Obviously this is level 3
-
-Unordered lists are cool
-
-+ Here's the first bullet
-+ And the second
-+ Okay, let's have three
-
-As are ordered lists
-
-1. A numbered list would be good
-1. It doesn't matter what numbers you used.
-1. In Markdown the sequence will climb by one
-9. Even if you add weird numbers
-6. Like this
-
-We can add horizontal rules like this 
-
-- - -
-
-And we can get code blocks by using tabs (or 4 spaces)
-
-    var i = 10;
-    console.log('Some statement')
-
-Sometimes it's nice to get a *little* emphasis, though sometimes you want a **lot**
-
-Sometimes we might want a link
-
-[Daring Fireball Markdown Syntax](http://daringfireball.net/projects/markdown/syntax)
-
-Sometimes we might want an image
-
-![Daring Fireball Logo](http://daringfireball.net/graphics/logos/)
-
-#+END_SRC
-- Send the document through your parser and have a look at the result. Keep hold of this document as it'll be a good reference guid for you in the future.
-* Starting your projects
+:END: 
+- Counting in binary looks like this
+#+BEGIN_HTML
+<object data="js/countingBinary.html" width='800px' height='100px'></object>
+#+END_HTML
+- You can compare binary and denary numbers below.
+#+BEGIN_HTML
+<object data="js/countingBoth.html" width='800px' height='100px'></object>
+#+END_HTML
+** Try It
 :PROPERTIES:
-:HTML_CONTAINER_CLASS: activity
-:END:      
-- [[file:doc/How-Computers-Work.md][Download this file]]
-- You can use this as a guide for your write up.
-- Open it up in a text editor and have a quick scan through
+:HTML_CONTAINER_CLASS: try
+:END:
+- You can convert between binary and denary or denary and binary fairly easily.
+- The exercises below will help you learn how to do this.
+- To convert from binary - denary
+  1. Click on the cards, so that they flip over, until the number shown below the cards matches the binary number you are trying to convert. (ignoring preceding 0's)
+  2. Count the number of spots that are displayed in total. 
+  3. This is your denary number.
+- To convert from denary - binary
+  1. Click on the cards to flip them until you have the correct number of spots showing, equal to the denary number you are trying to convert.
+  2. Read off the binary number (ignoring preceding 0's) that are displayed below.
+#+BEGIN_HTML
+<object data="js/binary-denary.html" width='600px' height='250px'></object>
+#+END_HTML
+- Try converting 1001 from binary into denary, you should get the number 9
+- Try converting 19 from denary into binary, you should get the number 10011
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END: 
+- Have you figured out the general method yet?
+- Notice how many spots are on each card - 1,2,4,8,16....
+- Let's see if we can use this pattern to convert larger binary numbers.
+- Let's try the number =10100110=
+- The number consists of 8 /bits/ (We use the term bit to describe each unit)
+- Let's write out the number
+#+BEGIN_EXAMPLE
+1   0   1   0   0   1   1   0
+#+END_EXAMPLE
+- Now above the binary number, write the number of spots that would have appeared on each card. (Start on the right, with the number =1= and then double it each time.
+#+BEGIN_EXAMPLE
+128 64  32  16  8   4   2   1
+1   0   1   0   0   1   1   0
+#+END_EXAMPLE
+- Now multiply each bit by the denary number above it.
+#+BEGIN_EXAMPLE
+128 64  32  16  8   4   2   1
+1   0   1   0   0   1   1   0 X
+-----------------------------
+128 0   32  0   0   4   2   0 
+#+END_EXAMPLE
+- Now calculate the sum of these numbers
+#+BEGIN_EXAMPLE
+128 + 32 + 4 + 2 = 166
+#+END_EXAMPLE
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+- Have a go yourself with the following binary numbers - =1001011=, =1110110=, =11111111=
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END: 
+- Let's try converting from denary to binary.
+- We'll use the number 200.
+- We'll start by writing out the spots that would have been on the cards.
+#+BEGIN_EXAMPLE
+128 64  32  16  8   4   2   1
+#+END_EXAMPLE
+- Now we need to do a little mental arithmetic. Starting from the left, we see that the number 128 can /go into/ 200. 200/128 = 1 with a remainder of 72.
+- Let's write a 1 below the 128
+#+BEGIN_EXAMPLE
+128 64  32  16  8   4   2   1
+1
+#+END_EXAMPLE
+- We're left with a 72 remainder.
+- We now move to the next number - 64. 64 can /go into/ 72. 72/64 = 1 remainder 8
+- Let's write a 1 below the 64.
+#+BEGIN_EXAMPLE
+128 64  32  16  8   4   2   1
+1   1
+#+END_EXAMPLE
+- We're left with an 8 remainder.
+- We now move to the next number - 32. 32 can not /go into/ 8.
+- So we write a 0 below the number 32
+#+BEGIN_EXAMPLE
+128 64  32  16  8   4   2   1
+1   1   0
+#+END_EXAMPLE
+- We still have the remainder 8. 16 can not /go into/ 8
+#+BEGIN_EXAMPLE
+128 64  32  16  8   4   2   1
+1   1   0   0
+#+END_EXAMPLE
+- We still have the remainder 8. 8 can /go into/ 8 with a remainder of 0.
+#+BEGIN_EXAMPLE
+128 64  32  16  8   4   2   1
+1   1   0   0   1
+#+END_EXAMPLE
+- As all we have left is 0, we can add trailing 0's to our number.
+#+BEGIN_EXAMPLE
+128 64  32  16  8   4   2   1
+1   1   0   0   1   0   0   0
+#+END_EXAMPLE
+- So our binary number is =11001000=
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+- Have a go yourself with the following denary numbers - =47, 128, 201=
 * Assessment
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
@@ -175,17 +237,27 @@ Sometimes we might want an image
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- Edit the top of the document to show the correct author and date
-- Add a description for Hardware and Software in the appropriate places
-- Run the document through your parser and show the output to your teacher.
+- To get you Silver Badge convert the following numbers from binary to denary
+     - 1001, 1100, 10001, 10101, 1111101, 11001010
 ** Badge It - Gold
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- Include links and images into your descriptions for Hardware and Software, as well as ensuring your descriptions include examples.
+- To get your Gold Badge convert the following numbers from denary to binary
+  - 9, 22, 45, 125, 201, 254, 300
 ** Badge It - Platinum
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- Wow your teacher with your thorough understanding of the varieties of hardware and software, and show a deep understanding of what the two things are.
-
+ 
+- Adding binary numbers is pretty much the same as adding denary numbers.
+  - 0 + 0 = 0
+  - 0 + 1 = 1
+  - 1 + 0 = 1
+  - 1 + 1 = 10 (or 0 and carry the 1)
+  - 1 + 1 + 1 = 11 (or 1 and carry the 1)
+- Try performing the following additions
+  - 100 + 11
+  - 100 + 100
+  - 100 + 1100
+  - 11001 + 10101

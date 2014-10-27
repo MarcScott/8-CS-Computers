@@ -171,7 +171,7 @@ h1{
     padding: 10px 10px;
     border-radius: 5px;
 }
-.activity img, video{
+.activity img, video,object{
     padding: 5px;
     border-radius: 10px;
     margin-left: auto;
@@ -255,81 +255,82 @@ h3 {
 
 /*CSS FOR LISTS*/
 ul li:before {
-  clear: none;
-  font-size: 16px;
-  line-height: 24px;
-  margin-top: 3px;
-  list-style-position: outside;
-  margin-left: 5px;
-  content: " ";
-  border-radius: 4px;
-  border: 2px solid @scheme-color;
-  padding: 6px 6px;
-  margin-right: 20px;
-  float: left;
+    clear: none;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 3px;
+    list-style-position: outside;
+    margin-left: 5px;
+    content: " ";
+    border-radius: 4px;
+    border: 2px solid @scheme-color;
+    padding: 6px 6px;
+    margin-right: 20px;
+    float: left;
 }
 .org-ol {
-  list-style-type: none;
-  list-style-type: decimal !ie;
-  /*IE 7- hack*/
-  counter-reset: li-counter;
+    list-style-type: none;
+    list-style-type: decimal !ie;
+    /*IE 7- hack*/
+    counter-reset: li-counter;
 }
 .org-ol > li {
-  position: relative;
-  margin-bottom: 6px;
+    position: relative;
+    margin-bottom: 6px;
 }
 .org-ol > li:before {
-  clear: none;
-  color: white;
-  background-color: @scheme-color;
-  font-size: 10px;
-  line-height: 10px;
-  margin: 1px;
-  list-style-position: outside;
-  margin-left: 5px;
-  content: " ";
-  border-radius: 4px;
-  padding: 3px 5px 3px 5px;
-  margin-right: 10px;
-  float: left;
-  content: counter(li-counter);
-  counter-increment: li-counter;
+    clear: none;
+    color: white;
+    background-color: @scheme-color;
+    font-size: 10px;
+    line-height: 10px;
+    margin: 1px;
+    list-style-position: outside;
+    margin-left: 5px;
+    content: " ";
+    border-radius: 4px;
+    padding: 3px 5px 3px 5px;
+    margin-right: 10px;
+    float: left;
+    content: counter(li-counter);
+    counter-increment: li-counter;
 }
 ul {
-  list-style-type: none;
-  line-height: 24px;
+    list-style-type: none;
+    line-height: 24px;
 }
 
 blockquote {
-font-family: Georgia, serif;
-font-size: 18px;
-font-style: italic;
-width: 500px;
-margin: 0.25em 0;
-padding: 0.25em 40px;
-line-height: 1.45;
-position: relative;
-color: #383838;
+    text-align:center;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-style: italic;
+    width: 500px;
+    margin: 0.25em 0;
+    padding: 0.25em 40px;
+    line-height: 1.45;
+    position: relative;
+    color: #383838;
 }
 
 blockquote:before {
-display: block;
-content: "\201C";
-font-size: 80px;
-position: absolute;
-left: -20px;
-top: -20px;
-color: #7a7a7a;
+    display: block;
+    content: "\201C";
+    font-size: 80px;
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    color: #7a7a7a;
 }
 blockquote cite {
-color: #999999;
-font-size: 14px;
-display: block;
-margin-top: 5px;
+    color: #999999;
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
 }
- 
+
 blockquote cite:before {
-content: "\2014 \2009";
+    content: "\2014 \2009";
 }
 
 /*TABLES GRRR*/

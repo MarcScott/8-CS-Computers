@@ -153,7 +153,8 @@ h1 {
   border-radius: 5px;
 }
 .activity img,
-video {
+video,
+object {
   padding: 5px;
   border-radius: 10px;
   margin-left: auto;
@@ -267,6 +268,7 @@ ul {
   line-height: 24px;
 }
 blockquote {
+  text-align: center;
   font-family: Georgia, serif;
   font-size: 18px;
   font-style: italic;

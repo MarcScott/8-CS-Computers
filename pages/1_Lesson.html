@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>How A Computer Works</title>
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">How A Computer Works</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Binary</a>
+<ul>
+<li><a href="#sec-1-1">Learn It</a></li>
+<li><a href="#sec-1-2">Research It</a></li>
+<li><a href="#sec-1-3">Learn It</a></li>
+<li><a href="#sec-1-4">Learn It</a></li>
+<li><a href="#sec-1-5">Try It</a></li>
+<li><a href="#sec-1-6">Learn It</a></li>
+<li><a href="#sec-1-7">Try It</a></li>
+<li><a href="#sec-1-8">Learn It</a></li>
+<li><a href="#sec-1-9">Try It</a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2. Assessment</a>
+<ul>
+<li><a href="#sec-2-1">Badge It - Silver</a></li>
+<li><a href="#sec-2-2">Badge It - Gold</a></li>
+<li><a href="#sec-2-3">Badge It - Platinum</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class=ribbon>
+<a href="https://github.com/MarcScott/8-CS-Computers">Fork me on GitHub</a>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2 activity">
+<h2 id="sec-1"><span class="section-number-2">1</span> Binary</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+To understand a little about how computers work, you'll need to know about binary
+</p>
+</div>
+<div id="outline-container-sec-1-1" class="outline-3 learn">
+<h3 id="sec-1-1">Learn It</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>If you were asked to count to nine, then you'd probably do something along the lines of the following. (Click to reset)
+</li>
+</ul>
+<object data="js/countingToNine.html" width='600px' height='100px'></object>
+<ul class="org-ul">
+<li>But what happens when you want to go higher than nine?
+</li>
+<li>You suddenly run out of new numbers and have to reuse digits you've already used.
+</li>
+</ul>
+<object data="js/countingDenary.html" width='600px' height='100px'></object>
+<ul class="org-ul">
+<li>The counting system we use is called base 10, often called <i>denary</i>. This means we have 10 unique numbers (0 up to 9). When we start counting and reach the number 9 and want to continue, we use a preceding 1 (to indicate that we have a single unit of 'tens'), and then start counting from 0 again.
+</li>
+<li>You've probably not given much thought to why we count in 10's but a simple explanation has been provided by Georges Ifrah in his book <i>The Universal History of Numbers</i>.
+</li>
+</ul>
+<blockquote>
+<p>
+Traces of the anthropomorphic origin of counting systems can be found in many languages. In the Ali language (Central Africa), for example, "five" and "ten" are respectively moro and mbouna: moro is actually the word for "hand" and mbouna is a contraction of moro ("five") and bouna, meaning "two" (thus "ten"="two hands").
+</p>
+
+<p>
+It is therefore very probable that the Indo-European, Semitic and Mongolian words for the first ten numbers derive from expressions related to finger-counting. But this is an unverifiable hypothesis, since the original meanings of the names of the numbers have been lost.
+</p>
+</blockquote>
+<ul class="org-ul">
+<li>What this basically means is that we're not 100% sure why we count in 10s, but it's probably because we have ten fingers.
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1-2" class="outline-3 research">
+<h3 id="sec-1-2">Research It</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li>Not all cultures count using base 10.
+</li>
+<li>Conduct some research online to see if you can find out about other numbering systems used by other cultures.
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1-3" class="outline-3 learn">
+<h3 id="sec-1-3">Learn It</h3>
+<div class="outline-text-3" id="text-1-3">
+<ul class="org-ul">
+<li>Computers <b>don't use base 10</b>
+</li>
+<li>Computers chips are basically constructed from transistors that are organised to act as switches.
+</li>
+<li>You'll learn more about transistors in the next lesson, but for now think of each transistor as a switch. I can be <i>ON</i> or <i>OFF</i> (in much the same way as a light-switch can). 
+</li>
+<li>This means that computers use a base 2 numbering system, called <b>binary</b>. <i>ON</i> is represented by the number 1 and <i>OFF</i> is represented by the number 0.
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1-4" class="outline-3 learn">
+<h3 id="sec-1-4">Learn It</h3>
+<div class="outline-text-3" id="text-1-4">
+<ul class="org-ul">
+<li>Counting in binary looks like this
+</li>
+</ul>
+<object data="js/countingBinary.html" width='800px' height='100px'></object>
+<ul class="org-ul">
+<li>You can compare binary and denary numbers below.
+</li>
+</ul>
+<object data="js/countingBoth.html" width='800px' height='100px'></object>
+</div>
+</div>
+<div id="outline-container-sec-1-5" class="outline-3 try">
+<h3 id="sec-1-5">Try It</h3>
+<div class="outline-text-3" id="text-1-5">
+<ul class="org-ul">
+<li>You can convert between binary and denary or denary and binary fairly easily.
+</li>
+<li>The exercises below will help you learn how to do this.
+</li>
+<li>To convert from binary - denary
+<ol class="org-ol">
+<li>Click on the cards, so that they flip over, until the number shown below the cards matches the binary number you are trying to convert. (ignoring preceding 0's)
+</li>
+<li>Count the number of spots that are displayed in total. 
+</li>
+<li>This is your denary number.
+</li>
+</ol>
+</li>
+<li>To convert from denary - binary
+<ol class="org-ol">
+<li>Click on the cards to flip them until you have the correct number of spots showing, equal to the denary number you are trying to convert.
+</li>
+<li>Read off the binary number (ignoring preceding 0's) that are displayed below.
+</li>
+</ol>
+</li>
+</ul>
+<object data="js/binary-denary.html" width='600px' height='250px'></object>
+<ul class="org-ul">
+<li>Try converting 1001 from binary into denary, you should get the number 9
+</li>
+<li>Try converting 19 from denary into binary, you should get the number 10011
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1-6" class="outline-3 learn">
+<h3 id="sec-1-6">Learn It</h3>
+<div class="outline-text-3" id="text-1-6">
+<ul class="org-ul">
+<li>Have you figured out the general method yet?
+</li>
+<li>Notice how many spots are on each card - 1,2,4,8,16&#x2026;.
+</li>
+<li>Let's see if we can use this pattern to convert larger binary numbers.
+</li>
+<li>Let's try the number <code>10100110</code>
+</li>
+<li>The number consists of 8 <i>bits</i> (We use the term bit to describe each unit)
+</li>
+<li>Let's write out the number
+</li>
+</ul>
+<pre class="example">
+1   0   1   0   0   1   1   0
+</pre>
+<ul class="org-ul">
+<li>Now above the binary number, write the number of spots that would have appeared on each card. (Start on the right, with the number <code>1</code> and then double it each time.
+</li>
+</ul>
+<pre class="example">
+128 64  32  16  8   4   2   1
+1   0   1   0   0   1   1   0
+</pre>
+<ul class="org-ul">
+<li>Now multiply each bit by the denary number above it.
+</li>
+</ul>
+<pre class="example">
+128 64  32  16  8   4   2   1
+1   0   1   0   0   1   1   0 X
+-----------------------------
+128 0   32  0   0   4   2   0
+</pre>
+<ul class="org-ul">
+<li>Now calculate the sum of these numbers
+</li>
+</ul>
+<pre class="example">
+128 + 32 + 4 + 2 = 166
+</pre>
+</div>
+</div>
+<div id="outline-container-sec-1-7" class="outline-3 try">
+<h3 id="sec-1-7">Try It</h3>
+<div class="outline-text-3" id="text-1-7">
+<ul class="org-ul">
+<li>Have a go yourself with the following binary numbers - <code>1001011</code>, <code>1110110</code>, <code>11111111</code>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1-8" class="outline-3 learn">
+<h3 id="sec-1-8">Learn It</h3>
+<div class="outline-text-3" id="text-1-8">
+<ul class="org-ul">
+<li>Let's try converting from denary to binary.
+</li>
+<li>We'll use the number 200.
+</li>
+<li>We'll start by writing out the spots that would have been on the cards.
+</li>
+</ul>
+<pre class="example">
+128 64  32  16  8   4   2   1
+</pre>
+<ul class="org-ul">
+<li>Now we need to do a little mental arithmetic. Starting from the left, we see that the number 128 can <i>go into</i> 200. 200/128 = 1 with a remainder of 72.
+</li>
+<li>Let's write a 1 below the 128
+</li>
+</ul>
+<pre class="example">
+128 64  32  16  8   4   2   1
+1
+</pre>
+<ul class="org-ul">
+<li>We're left with a 72 remainder.
+</li>
+<li>We now move to the next number - 64. 64 can <i>go into</i> 72. 72/64 = 1 remainder 8
+</li>
+<li>Let's write a 1 below the 64.
+</li>
+</ul>
+<pre class="example">
+128 64  32  16  8   4   2   1
+1   1
+</pre>
+<ul class="org-ul">
+<li>We're left with an 8 remainder.
+</li>
+<li>We now move to the next number - 32. 32 can not <i>go into</i> 8.
+</li>
+<li>So we write a 0 below the number 32
+</li>
+</ul>
+<pre class="example">
+128 64  32  16  8   4   2   1
+1   1   0
+</pre>
+<ul class="org-ul">
+<li>We still have the remainder 8. 16 can not <i>go into</i> 8
+</li>
+</ul>
+<pre class="example">
+128 64  32  16  8   4   2   1
+1   1   0   0
+</pre>
+<ul class="org-ul">
+<li>We still have the remainder 8. 8 can <i>go into</i> 8 with a remainder of 0.
+</li>
+</ul>
+<pre class="example">
+128 64  32  16  8   4   2   1
+1   1   0   0   1
+</pre>
+<ul class="org-ul">
+<li>As all we have left is 0, we can add trailing 0's to our number.
+</li>
+</ul>
+<pre class="example">
+128 64  32  16  8   4   2   1
+1   1   0   0   1   0   0   0
+</pre>
+<ul class="org-ul">
+<li>So our binary number is <code>11001000</code>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1-9" class="outline-3 try">
+<h3 id="sec-1-9">Try It</h3>
+<div class="outline-text-3" id="text-1-9">
+<ul class="org-ul">
+<li>Have a go yourself with the following denary numbers - <code>47, 128, 201</code>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2" class="outline-2 activity">
+<h2 id="sec-2"><span class="section-number-2">2</span> Assessment</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-sec-2-1" class="outline-3 badge">
+<h3 id="sec-2-1">Badge It - Silver</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>To get you Silver Badge convert the following numbers from binary to denary
+<ul class="org-ul">
+<li>1001, 1100, 10001, 10101, 1111101, 11001010
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-2-2" class="outline-3 badge">
+<h3 id="sec-2-2">Badge It - Gold</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>To get your Gold Badge convert the following numbers from denary to binary
+<ul class="org-ul">
+<li>9, 22, 45, 125, 201, 254, 300
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-2-3" class="outline-3 badge">
+<h3 id="sec-2-3">Badge It - Platinum</h3>
+<div class="outline-text-3" id="text-2-3">
+
+<ul class="org-ul">
+<li>Adding binary numbers is pretty much the same as adding denary numbers.
+<ul class="org-ul">
+<li>0 + 0 = 0
+</li>
+<li>0 + 1 = 1
+</li>
+<li>1 + 0 = 1
+</li>
+<li>1 + 1 = 10 (or 0 and carry the 1)
+</li>
+<li>1 + 1 + 1 = 11 (or 1 and carry the 1)
+</li>
+</ul>
+</li>
+<li>Try performing the following additions
+<ul class="org-ul">
+<li>100 + 11
+</li>
+<li>100 + 100
+</li>
+<li>100 + 1100
+</li>
+<li>11001 + 10101
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="validation"></p>
+</div>
+</body>
+</html>
