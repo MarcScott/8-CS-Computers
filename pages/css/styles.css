@@ -268,12 +268,12 @@ ul {
   line-height: 24px;
 }
 blockquote {
-  text-align: center;
+  text-align: left;
   font-family: Georgia, serif;
   font-size: 18px;
   font-style: italic;
-  width: 500px;
-  margin: 0.25em 0;
+  width: 600px;
+  margin-left: 100px;
   padding: 0.25em 40px;
   line-height: 1.45;
   position: relative;
@@ -301,7 +301,7 @@ blockquote cite:before {
 table {
   border: 1px solid #741371;
   border-collapse: collapse;
-  width: 100%;
+  width: 800px;
   text-align: center;
 }
 table th {
