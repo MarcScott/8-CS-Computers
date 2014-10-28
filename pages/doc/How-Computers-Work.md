@@ -4,7 +4,7 @@
 
 # What is a Computer?
 - *Data* is a collection of facts, such as values or measurements.
-- It can be numbers, words, measurements, observations or even just descriptions of things
+- It can be numbers, words, measurements, observations or even just descriptions of things.
 - A **computer** is an electronic device that can store, retrieve, and process data.
 ![A Computer](http://www.buffalocomputerconsulting.com/images/computer.jpg)
 
@@ -12,7 +12,7 @@
 
 ## What is Software?
 
-# The different types of computers
+## The different types of computers
 
 ## Embedded Computers
 
@@ -24,9 +24,9 @@
 
 ## Supercomputers
 
-# The CPU
+## The CPU
 
-# Storage
+## Storage
 
 ## Non-volatile storage
 
