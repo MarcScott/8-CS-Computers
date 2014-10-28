@@ -127,7 +127,8 @@
 #+BEGIN_HTML
 <object data="js/AND.html" width='200px' height='100px'></object>
 #+END_HTML
-
+- Hopefully you can see that the two are identical. When inputs A and B are on, output Q is on. When either or both A and B are off, Q is off.
+- The AND gate has a very similar symbol to the NAND gate (it's just missing the little circle near the output) so make sure you don't get the two confused.
 * Assessment
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
