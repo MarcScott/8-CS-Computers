@@ -87,9 +87,9 @@
 #+BEGIN_HTML
 <object data="js/NAND.html" width='200px' height='200px'></object>
 #+END_HTML
------
+------
 #+BEGIN_HTML
-<object data="js/tranNAND.html" width='300px' height='320px'></object>
+<object data="js/TranNAND.html" width='300px' height='320px'></object>
 #+END_HTML
 * Combining NAND gates
 :PROPERTIES:
