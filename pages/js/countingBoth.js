@@ -2,9 +2,10 @@ var x = 0;
 var y = 0;
 var z = 0;
 var reset = false;
+
 function setup(){
-createCanvas(800, 100);
-frameRate(30)
+    createCanvas(800, 100);
+    frameRate(30)
 }
 
 function draw(){

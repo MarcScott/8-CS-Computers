@@ -4,6 +4,7 @@ var packCoords=[];
 var binary = [1,1,1,1,1]
 
 function setup(){
+    frameRate(0)
     createCanvas(600, 250);
     // Create the cards in the pack
     for (var i = 0;i<5;i++){
@@ -21,7 +22,7 @@ function draw(){
     fill(100)
     for (var i = 0; i<binary.length;i++){
 	text(binary[i],300 - i * 70,240)
-}
+    }
 }
 
 //Setup the card class

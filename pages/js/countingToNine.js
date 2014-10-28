@@ -3,8 +3,8 @@ var y = 0;
 var reset = false;
 
 function setup(){
-createCanvas(600, 100);
-frameRate(30)
+    createCanvas(600, 100);
+    frameRate(30)
 }
 
 function draw(){

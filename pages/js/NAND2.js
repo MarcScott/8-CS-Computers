@@ -6,7 +6,7 @@ var B = 0;
 
 function setup(){
     createCanvas(1500, 1500);  
-    frameRate(30);
+    frameRate(0);
     live = color(255, 100,20 )
     neutral = color(100,100,100)
 }
