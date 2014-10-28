@@ -74,7 +74,7 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: save
 :END:
-* Simplifying NAND gates
+* All the gates
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
@@ -82,29 +82,52 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-- NAND gates are really useful, but it would be annoying to have to draw the transistors every time.
-- Instead we use a symbol like the one shown below. You can click the buttons and compare it to the transistor version below it, to see that they are identical in function.
+- In the last lesson we looked at how we can combine NAND gates to form other types of gates. Let's have a look at each of the gates and see how we can use them.
+- You can click on the input buttons to see what each does.
+- The first you should now be familiar with - The NAND gate.
 #+BEGIN_HTML
-<object data="js/NAND.html" width='200px' height='200px'></object>
+<object data="js/NANDsmall.html" width='200px' height='100px'></object>
 #+END_HTML
-------
+- The next is the NOT gate, sometimes called an inverter.
 #+BEGIN_HTML
-<object data="js/TranNAND.html" width='300px' height='320px'></object>
+<object data="js/NOT.html" width='200px' height='100px'></object>
 #+END_HTML
-* Combining NAND gates
+- Then there is the AND gate
+#+BEGIN_HTML
+<object data="js/AND.html" width='200px' height='100px'></object>
+#+END_HTML
+- This is an OR gate
+#+BEGIN_HTML
+<object data="js/OR.html" width='200px' height='100px'></object>
+#+END_HTML
+- This is the opposite of an OR gate, called a NOR gate
+#+BEGIN_HTML
+<object data="js/NOR.html" width='200px' height='100px'></object>
+#+END_HTML
+- This last one is called an XOR gate
+#+BEGIN_HTML
+<object data="js/XOR.html" width='200px' height='100px'></object>
+#+END_HTML
+** Learn It
 :PROPERTIES:
-:HTML_CONTAINER_CLASS: activity
+:HTML_CONTAINER_CLASS: learn
 :END:
-- NAND gates are said to be /universal logical gates/ because you can make all other types of logic gate out of them.
-- We can take a single NAND gate like this one.
+- So what is the use of all these logic gates?
+- Well combining all these logic gates together allows computers to actually work.
+- A computer's main job is to store and process data.
+- In the first lesson, you learned how to add binary numbers together. Computers use logic gates to do this. Let's start simply and just show the layout for adding two bits together.
 #+BEGIN_HTML
-<object data="js/NANDabs.html" width='200px' height='100px'></object>
+<object data="js/adder.html" width='250px' height='200px'></object>
 #+END_HTML
-- And use it to make this
-#+BEGIN_HTML
-<object data="js/ANDfromNANDS.html" width='300px' height='100px'></object>
-#+END_HTML
-- This is called an AND gate
+- Try it out. The two inputs indicate the bits you want to add together.
+- The upper output is the result of the addition, while the lower output is the carry.
+#+BEGIN_EXAMPLE
+0 + 0 = 0
+0 + 1 = 1
+1 + 0 = 1
+1 + 1 = 0 and carry 1 (so 10)
+#+END_EXAMPLE
+
 * Assessment
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
@@ -113,22 +136,6 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- Have a look at the diagrams below.
-- With each diagram is a truth table that you need to complete.
-* Making other gates from NAND gates.
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: activity
-:END:
-- We've already seen one other gate that can be made using NAND gates - it was called an AND gate.
-- Below is the diagram for the NAND gate arrangements for an AND gate, and a simplified symbol for an AND gate that is commonly used.
-#+BEGIN_HTML
-<object data="js/ANDfromNANDS.html" width='300px' height='100px'></object>
-#+END_HTML
-#+BEGIN_HTML
-<object data="js/AND.html" width='200px' height='100px'></object>
-#+END_HTML
-- Hopefully you can see that the two are identical. When inputs A and B are on, output Q is on. When either or both A and B are off, Q is off.
-- The AND gate has a very similar symbol to the NAND gate (it's just missing the little circle near the output) so make sure you don't get the two confused.
 * Assessment
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
@@ -145,5 +152,6 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
+
 
 

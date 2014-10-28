@@ -153,14 +153,15 @@ for the JavaScript code in this tag.
 <li><a href="#sec-3-1">Badge It - Silver</a></li>
 </ul>
 </li>
-<li><a href="#sec-4">4. Assessment</a>
-<ul>
-<li><a href="#sec-4-1">Badge It - Gold</a></li>
-</ul>
-</li>
+<li><a href="#sec-4">4. Making other gates from NAND gates.</a></li>
 <li><a href="#sec-5">5. Assessment</a>
 <ul>
-<li><a href="#sec-5-1">Badge It - Platinum</a></li>
+<li><a href="#sec-5-1">Badge It - Gold</a></li>
+</ul>
+</li>
+<li><a href="#sec-6">6. Assessment</a>
+<ul>
+<li><a href="#sec-6-1">Badge It - Platinum</a></li>
 </ul>
 </li>
 </ul>
@@ -210,7 +211,6 @@ for the JavaScript code in this tag.
 </ul>
 </div>
 </div>
-
 <div id="outline-container-sec-3" class="outline-2 activity">
 <h2 id="sec-3"><span class="section-number-2">3</span> Assessment</h2>
 <div class="outline-text-2" id="text-3">
@@ -218,17 +218,119 @@ for the JavaScript code in this tag.
 <div id="outline-container-sec-3-1" class="outline-3 badge">
 <h3 id="sec-3-1">Badge It - Silver</h3>
 <div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>Have a look at the below. This is the arrangement for a NOT gate, sometimes called an inverter.
+</li>
+<li>Construct a Truth table for the arrangement, showing input A output Q.
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/NOT_from_NAND.svg/240px-NOT_from_NAND.svg.png" alt="240px-NOT_from_NAND.svg.png" />
+</p>
+</div>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="right" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="right">A</th>
+<th scope="col" class="left">Q</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="right">0</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="right">0</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="right">1</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="right">1</td>
+<td class="left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
+
 <div id="outline-container-sec-4" class="outline-2 activity">
-<h2 id="sec-4"><span class="section-number-2">4</span> Assessment</h2>
+<h2 id="sec-4"><span class="section-number-2">4</span> Making other gates from NAND gates.</h2>
 <div class="outline-text-2" id="text-4">
-</div>
-<div id="outline-container-sec-4-1" class="outline-3 badge">
-<h3 id="sec-4-1">Badge It - Gold</h3>
-<div class="outline-text-3" id="text-4-1">
-</div>
+<ul class="org-ul">
+<li>We've already seen one other gate that can be made using NAND gates - it was called an AND gate.
+</li>
+<li>Below is the diagram for the NAND gate arrangements for an AND gate again, and a simplified symbol for an AND gate that is commonly used.
+</li>
+</ul>
+<object data="js/ANDfromNANDS.html" width='300px' height='100px'></object>
+<object data="js/AND.html" width='200px' height='100px'></object>
+<ul class="org-ul">
+<li>Hopefully you can see that the two are identical. When inputs A and B are on, output Q is on. When either or both A and B are off, Q is off.
+</li>
+<li>The AND gate has a very similar symbol to the NAND gate (it's just missing the little circle near the output) so make sure you don't get the two confused.
+</li>
+<li>The truth table for an AND gate looks like this
+</li>
+</ul>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="right" />
+
+<col  class="right" />
+
+<col  class="right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="right">A</th>
+<th scope="col" class="right">B</th>
+<th scope="col" class="right">Q</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="right">0</td>
+<td class="right">0</td>
+<td class="right">0</td>
+</tr>
+
+<tr>
+<td class="right">1</td>
+<td class="right">0</td>
+<td class="right">0</td>
+</tr>
+
+<tr>
+<td class="right">0</td>
+<td class="right">1</td>
+<td class="right">0</td>
+</tr>
+
+<tr>
+<td class="right">1</td>
+<td class="right">1</td>
+<td class="right">1</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div id="outline-container-sec-5" class="outline-2 activity">
@@ -236,8 +338,63 @@ for the JavaScript code in this tag.
 <div class="outline-text-2" id="text-5">
 </div>
 <div id="outline-container-sec-5-1" class="outline-3 badge">
-<h3 id="sec-5-1">Badge It - Platinum</h3>
+<h3 id="sec-5-1">Badge It - Gold</h3>
 <div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>Look at the diagrams below, showing other NAND gate arrangements. These are called OR, NOR and XOR gates.
+</li>
+<li>For each one, draw a Truth Table showing inputs and outputs.
+</li>
+</ul>
+<hr  />
+<ul class="org-ul">
+<li>OR gate
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/90/OR_from_NAND.svg/400px-OR_from_NAND.svg.png" alt="400px-OR_from_NAND.svg.png" />
+</p>
+</div>
+<hr  />
+<ul class="org-ul">
+<li>NOR gate
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/NOR_from_NAND.svg/560px-NOR_from_NAND.svg.png" alt="560px-NOR_from_NAND.svg.png" />
+</p>
+</div>
+<hr  />
+<ul class="org-ul">
+<li>XOR gate
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/XOR_from_NAND.svg/600px-XOR_from_NAND.svg.png" alt="600px-XOR_from_NAND.svg.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-6" class="outline-2 activity">
+<h2 id="sec-6"><span class="section-number-2">6</span> Assessment</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-sec-6-1" class="outline-3 badge">
+<h3 id="sec-6-1">Badge It - Platinum</h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li>There is a special arrangement of NAND gates called a D-Latch.
+</li>
+<li>Use the Web to find out what the arrangement of NAND gates in a D-Latch is.
+</li>
+<li>Write a description of a D-Latch and explaine why it is useful in computing.
+</li>
+</ul>
 </div>
 </div>
 </div>

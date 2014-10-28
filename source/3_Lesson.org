@@ -113,21 +113,37 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- Have a look at the diagrams below.
-- With each diagram is a truth table that you need to complete.
+- Have a look at the below. This is the arrangement for a NOT gate, sometimes called an inverter.
+- Construct a Truth table for the arrangement, showing input A output Q.
+http://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/NOT_from_NAND.svg/240px-NOT_from_NAND.svg.png
+| A | Q |
+|---+---|
+| 0 |   |
+| 0 |   |
+| 1 |   |
+| 1 |   |
+
 * Making other gates from NAND gates.
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
 - We've already seen one other gate that can be made using NAND gates - it was called an AND gate.
-- Below is the diagram for the NAND gate arrangements for an AND gate, and a simplified symbol for an AND gate that is commonly used.
+- Below is the diagram for the NAND gate arrangements for an AND gate again, and a simplified symbol for an AND gate that is commonly used.
 #+BEGIN_HTML
 <object data="js/ANDfromNANDS.html" width='300px' height='100px'></object>
 #+END_HTML
 #+BEGIN_HTML
 <object data="js/AND.html" width='200px' height='100px'></object>
 #+END_HTML
-
+- Hopefully you can see that the two are identical. When inputs A and B are on, output Q is on. When either or both A and B are off, Q is off.
+- The AND gate has a very similar symbol to the NAND gate (it's just missing the little circle near the output) so make sure you don't get the two confused.
+- The truth table for an AND gate looks like this
+| A | B | Q |
+|---+---+---|
+| 0 | 0 | 0 |
+| 1 | 0 | 0 |
+| 0 | 1 | 0 |
+| 1 | 1 | 1 |
 * Assessment
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
@@ -136,6 +152,18 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
+- Look at the diagrams below, showing other NAND gate arrangements. These are called OR, NOR and XOR gates.
+- For each one, draw a Truth Table showing inputs and outputs.
+-----
+- OR gate
+[[http://upload.wikimedia.org/wikipedia/commons/thumb/9/90/OR_from_NAND.svg/400px-OR_from_NAND.svg.png]]
+-----
+- NOR gate
+[[http://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/NOR_from_NAND.svg/560px-NOR_from_NAND.svg.png]]
+-----
+- XOR gate
+http://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/XOR_from_NAND.svg/600px-XOR_from_NAND.svg.png
+
 * Assessment
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
@@ -144,5 +172,8 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
+- There is a special arrangement of NAND gates called a D-Latch.
+- Use the Web to find out what the arrangement of NAND gates in a D-Latch is.
+- Write a description of a D-Latch and explaine why it is useful in computing.
 
 

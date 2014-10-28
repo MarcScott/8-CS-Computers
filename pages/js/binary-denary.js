@@ -4,7 +4,7 @@ var packCoords=[];
 var binary = [1,1,1,1,1]
 
 function setup(){
-    frameRate(0)
+    frameRate(12)
     createCanvas(600, 250);
     // Create the cards in the pack
     for (var i = 0;i<5;i++){

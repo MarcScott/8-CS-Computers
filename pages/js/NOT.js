@@ -1,5 +1,4 @@
 var A = false;
-var B = false;
 
 function setup(){
     createCanvas(200,100);  
@@ -8,35 +7,29 @@ function setup(){
     neutral = color(100,100,100)
 }
 
-function AND(x,y,A,B){
+function NOT(x,y,A){
     this.x = x;
     this.y = y;
     this.A = A;
-    this.B = B;
 }
 
-AND.prototype.display = function(){
+NOT.prototype.display = function(){
     //Move to x and y
     push()
     strokeWeight(6)
     scale(0.5,0.5)
     translate(this.x-100,this.y-100)
-    //Draw the AND gate
     stroke(neutral)
-    line(50,50,100,50)
-    line(50,150,100,150)
-    line(50,50,50,150)
-    noFill()
-    arc(100,100,100,100, PI+HALF_PI,HALF_PI);
-    // Inputs and Outputs colors set depending on A or B
+    //Draw OR gate using a tinted image
+    triangle(50,50,50,150,125,100)
+    ellipse(135,100,20,20);
     stroke(this.A ? live : neutral)
-    line(0,75,50,75)
-    stroke(this.B ? live : neutral)
-    line(0,125,50,125)
-    stroke(this.B&&this.A ? live : neutral)
-    line(150,100,200,100)
+    line(0,100,50,100)
+    // Inputs and Outputs colors set depending on A
+    stroke(!this.A ? live : neutral)
+    line(150,100,190,100)
     pop()
-    return this.B&&this.A
+    return !this.A
 }
 
 //functions to switch value of A on button pushes
@@ -44,22 +37,18 @@ function switchA(){
     A = !A
 }
 
-function switchB(){
-    B = !B
-}
+
 
 //draw it all with some buttons
 function draw(){
     background(255)
     //draw a NAND
-    Q = new AND(200,100,A,B).display()
+    Q = new NOT(200,100,A).display()
     //and add some buttons
     btnA = createButton(A ? 1:0)
-    btnA.position(25,27)
-    btnB = createButton(B ? 1:0)
-    btnB.position(25,52)
+    btnA.position(25,39)
     btnQ = createButton(Q ? 1:0)
     btnQ.position(150,39)
     btnA.mousePressed(switchA)
-    btnB.mousePressed(switchB)
+
 }

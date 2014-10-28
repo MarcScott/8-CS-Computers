@@ -118,7 +118,6 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-
 - We can combine transistors to make some pretty useful things. One combination of transistors is known as a NAND gate.
 - A NAND gate is made from two transistors combined as shown below.
 #+BEGIN_HTML
@@ -130,11 +129,15 @@
 #+BEGIN_HTML
 <object data="js/TranNAND.html" width='300px' height='320px'></object>
 #+END_HTML
+* Assessment
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
 ** Badge It - Gold
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- Below is a table showing the states that A and B can have, with a column left blank for the OUT (which has been labeled Q).
+- Below is a table showing the states that A and B can have, with a column left blank for the OUT (which has been labeled Q). This is called a *Truth Table*.
 | A | B | Q |
 |---+---+---|
 | 0 | 0 |   |
@@ -160,32 +163,4 @@ NAND gates have two inputs (A and B) and an output (___). When A and B are both 
 | 0 | 1 | 1 |
 | 1 | 1 | 1 | 
 - Using any graphics package on your computer, try to draw the arrangement of transistors that would produce a table like this.
-* Assessment
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: activity
-:END:
-** Badge It - Gold
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: badge
-:END:
-- Below is a table showing the possible 
-* Assessment
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: activity
-:END:
-** Badge It - Platinum
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: badge
-:END:
- 
-- Adding binary numbers is pretty much the same as adding denary numbers.
-  - 0 + 0 = 0
-  - 0 + 1 = 1
-  - 1 + 0 = 1
-  - 1 + 1 = 10 (or 0 and carry the 1)
-  - 1 + 1 + 1 = 11 (or 1 and carry the 1)
-- Try performing the following additions
-  - 100 + 11
-  - 100 + 100
-  - 100 + 1100
-  - 11001 + 10101
+
