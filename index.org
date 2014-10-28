@@ -24,6 +24,11 @@
 :HTML_CONTAINER_CLASS: link-heading
 :END:
 
+* [[file:pages/4_Lesson.html][Week 4 - All your gates are belong to us]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: link-heading
+:END:
+
 * [[file:pages/assessment_guidance.html][Assessment]]
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: link-heading
