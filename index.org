@@ -8,7 +8,7 @@
 
 #+BEGIN_HTML
 <div class=ribbon>
-<a href="https://github.com/MarcScott/7-CS-Internet">Fork me on GitHub</a>
+<a href="https://github.com/MarcScott/8-CS-Computers">Fork me on GitHub</a>
 </div>
 #+END_HTML
 * [[file:pages/1_Lesson.html][Week 1 - Beautiful Binary]]

@@ -145,22 +145,44 @@ for the JavaScript code in this tag.
 <li><a href="#sec-1">1. All the gates</a>
 <ul>
 <li><a href="#sec-1-1">Learn It</a></li>
-<li><a href="#sec-1-2">Learn It</a></li>
 </ul>
 </li>
-<li><a href="#sec-2">2. Assessment</a>
+<li><a href="#sec-2">2. A bit of an adder</a>
 <ul>
-<li><a href="#sec-2-1">Badge It - Silver</a></li>
+<li><a href="#sec-2-1">Learn It</a></li>
+<li><a href="#sec-2-2">Try It</a></li>
 </ul>
 </li>
-<li><a href="#sec-3">3. Assessment</a>
+<li><a href="#sec-3">3. A bit more of an adder</a>
 <ul>
-<li><a href="#sec-3-1">Badge It - Gold</a></li>
+<li><a href="#sec-3-1">Learn It</a></li>
+<li><a href="#sec-3-2">Try It</a></li>
 </ul>
 </li>
 <li><a href="#sec-4">4. Assessment</a>
 <ul>
-<li><a href="#sec-4-1">Badge It - Platinum</a></li>
+<li><a href="#sec-4-1">Badge It - Silver</a></li>
+</ul>
+</li>
+<li><a href="#sec-5">5. Abstraction</a>
+<ul>
+<li><a href="#sec-5-1">Learn It</a></li>
+</ul>
+</li>
+<li><a href="#sec-6">6. Abstracting with code</a>
+<ul>
+<li><a href="#sec-6-1">Learn It</a></li>
+<li><a href="#sec-6-2">Try It</a></li>
+</ul>
+</li>
+<li><a href="#sec-7">7. Assessment</a>
+<ul>
+<li><a href="#sec-7-1">Badge It - Gold</a></li>
+</ul>
+</li>
+<li><a href="#sec-8">8. Assessment</a>
+<ul>
+<li><a href="#sec-8-1">Badge It - Platinum</a></li>
 </ul>
 </li>
 </ul>
@@ -213,9 +235,14 @@ for the JavaScript code in this tag.
 <object data="js/XOR.html" width='200px' height='100px'></object>
 </div>
 </div>
-<div id="outline-container-sec-1-2" class="outline-3 learn">
-<h3 id="sec-1-2">Learn It</h3>
-<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-sec-2" class="outline-2 activity">
+<h2 id="sec-2"><span class="section-number-2">2</span> A bit of an adder</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-sec-2-1" class="outline-3 learn">
+<h3 id="sec-2-1">Learn It</h3>
+<div class="outline-text-3" id="text-2-1">
 <ul class="org-ul">
 <li>So what is the use of all these logic gates?
 </li>
@@ -227,6 +254,12 @@ for the JavaScript code in this tag.
 </li>
 </ul>
 <object data="js/adder.html" width='250px' height='200px'></object>
+</div>
+</div>
+<div id="outline-container-sec-2-2" class="outline-3 try">
+<h3 id="sec-2-2">Try It</h3>
+<div class="outline-text-3" id="text-2-2">
+
 <ul class="org-ul">
 <li>Try it out. The two inputs indicate the bits you want to add together.
 </li>
@@ -239,37 +272,312 @@ for the JavaScript code in this tag.
 1 + 0 = 1
 1 + 1 = 0 and carry 1 (so 10)
 </pre>
-</div>
-</div>
-</div>
-
-<div id="outline-container-sec-2" class="outline-2 activity">
-<h2 id="sec-2"><span class="section-number-2">2</span> Assessment</h2>
-<div class="outline-text-2" id="text-2">
-</div>
-<div id="outline-container-sec-2-1" class="outline-3 badge">
-<h3 id="sec-2-1">Badge It - Silver</h3>
-<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>This is called a <i>Half Adder Circuit</i>.
+</li>
+</ul>
 </div>
 </div>
 </div>
 <div id="outline-container-sec-3" class="outline-2 activity">
-<h2 id="sec-3"><span class="section-number-2">3</span> Assessment</h2>
+<h2 id="sec-3"><span class="section-number-2">3</span> A bit more of an adder</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-sec-3-1" class="outline-3 badge">
-<h3 id="sec-3-1">Badge It - Gold</h3>
+<div id="outline-container-sec-3-1" class="outline-3 learn">
+<h3 id="sec-3-1">Learn It</h3>
 <div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>A <i>Full Adder</i> can be constructed with XOR, AND and OR gates.
+</li>
+<li>The difference between a Full Adder and a Half Adder, is that the Full Adder has an additional input. This is where the carry from the previous calculation can be placed.
+</li>
+<li>Have a look at the circuit below.
+</li>
+</ul>
+<object data="js/fulladder.html" width='500px' height='230px'></object>
+</div>
+</div>
+<div id="outline-container-sec-3-2" class="outline-3 try">
+<h3 id="sec-3-2">Try It</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>Let's have a go at a simple calculation. Say we want to add <code>111</code> to <code>11</code>.
+</li>
+<li>Let's align the two binary numbers.
+</li>
+</ul>
+<pre class="example">
+111
+ 11+
+---
+</pre>
+<ul class="org-ul">
+<li>Starting from the left, we need to add the two ones together. So on the circuit, click the inputs A and B so that they are both 1s.
+</li>
+<li>We see the result is <code>0</code> with a Carry of <code>1</code>
+</li>
+<li>Let's write that down.
+</li>
+</ul>
+<pre class="example">
+111
+ 11+
+---
+  0
+---
+ 1
+</pre>
+<ul class="org-ul">
+<li>Next we need to add the second column, but this now contains a Carry as well.
+</li>
+<li>Click buttons to make the inputs A and B set to <code>1</code>, and also the input C as this represents the Carry from the previous calculation.
+</li>
+<li>We see that we get a Result of <code>1</code> with a Carry of <code>1</code>.
+</li>
+<li>Let's write that down.
+</li>
+</ul>
+<pre class="example">
+111
+ 11+
+---
+ 10
+---
+11
+</pre>
+<ul class="org-ul">
+<li>Our third column now contains a <code>1</code> and the <code>1</code> carried over from the previous calculation.
+</li>
+<li>Click the buttons to set A to <code>1</code> and C to <code>1</code>
+</li>
+<li>We get a result of <code>0</code> with a <code>1</code> Carry.
+</li>
+<li>Let's write that in.
+</li>
+</ul>
+<pre class="example">
+ 111
+  11+
+ ---
+ 010
+ ---
+111
+</pre>
+<ul class="org-ul">
+<li>We now have a fourth column containing nothing but a Carry.
+</li>
+<li>If we set C to <code>1</code> and A and B to <code>0</code>, we get a result of <code>1</code>, so we can write that in as well.
+</li>
+</ul>
+<pre class="example">
+ 111
+  11+
+ ---
+1010
+ ---
+111
+</pre>
+<ul class="org-ul">
+<li>And there we have a result <code>1011</code>
+</li>
+</ul>
 </div>
 </div>
 </div>
+
 <div id="outline-container-sec-4" class="outline-2 activity">
 <h2 id="sec-4"><span class="section-number-2">4</span> Assessment</h2>
 <div class="outline-text-2" id="text-4">
 </div>
 <div id="outline-container-sec-4-1" class="outline-3 badge">
-<h3 id="sec-4-1">Badge It - Platinum</h3>
+<h3 id="sec-4-1">Badge It - Silver</h3>
 <div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>Demonstrate that you can use the full binary adder.
+</li>
+<li>Work in pairs. One of you should write down a binary addition to perform, and write down the results each time.
+</li>
+<li>The other member of the pair should operate the adder. You should be able to perform this without speaking.
+</li>
+<li>Ask your teacher to provide you with a binary addition to perform and demonstrate your skills.
+</li>
+<li>Here are some to practice on. <code>10 + 11</code>, <code>111 + 100</code>, <code>1010+1110</code>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-5" class="outline-2 activity">
+<h2 id="sec-5"><span class="section-number-2">5</span> Abstraction</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-sec-5-1" class="outline-3 learn">
+<h3 id="sec-5-1">Learn It</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>So what?
+</li>
+<li>Well let's just think back a little. All the Logic gates shown above can be constructed from NAND gates. And each NAND gate can be constructed from a couple of transistors.
+</li>
+<li>We've abstracted the circuits a little - which basically means we've simplified the rules without actually changing them. We could look at circuits containing dozens of transistors, but it would be difficult to work out what was going on. Redrawing transistor circuits using NAND gates is one layer of abstraction. Redrawing NAND gate circuits using AND, OR, XOR and NOR gates is another layer of abstraction.
+</li>
+<li>Let's remember that computer chips contain billions of transistors. What's more, the chips can flick those inputs and outputs billions of times a second. Imagine how quickly you could perform binary addition calculations if you could click the inputs and outputs of the Binary Adder a billion times a second. Imagine how quickly you could do it if you had a billion people sitting at a billion computers helping you out!
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-6" class="outline-2 activity">
+<h2 id="sec-6"><span class="section-number-2">6</span> Abstracting with code</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-sec-6-1" class="outline-3 learn">
+<h3 id="sec-6-1">Learn It</h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li>We can simulate logic gates in computer code.
+</li>
+<li>Create a new Python script using you're preferred text-editor or IDE (probably IDLE)
+</li>
+<li>Now copy and paste in this code.
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-python"><span style="color: #859900; font-weight: bold;">def</span> <span style="color: #268bd2;">AND</span>(A,B):
+    <span style="color: #859900; font-weight: bold;">return</span> A <span style="color: #859900; font-weight: bold;">and</span> B
+
+<span style="color: #859900; font-weight: bold;">def</span> <span style="color: #268bd2;">OR</span>(A,B):
+    <span style="color: #859900; font-weight: bold;">return</span> A <span style="color: #859900; font-weight: bold;">or</span> B
+
+<span style="color: #859900; font-weight: bold;">def</span> <span style="color: #268bd2;">NOT</span>(A):
+    <span style="color: #859900; font-weight: bold;">return</span> 1 - A
+
+<span style="color: #859900; font-weight: bold;">def</span> <span style="color: #268bd2;">NOR</span>(A,B):
+    <span style="color: #859900; font-weight: bold;">return</span> 1-(A <span style="color: #859900; font-weight: bold;">or</span> B)
+
+<span style="color: #859900; font-weight: bold;">def</span> <span style="color: #268bd2;">NAND</span>(A,B):
+    <span style="color: #859900; font-weight: bold;">return</span> 1 - (A <span style="color: #859900; font-weight: bold;">and</span> B)
+
+<span style="color: #859900; font-weight: bold;">def</span> <span style="color: #268bd2;">XOR</span>(A,B):
+    <span style="color: #859900; font-weight: bold;">return</span> A ^ B
+</pre>
+</div>
+<ul class="org-ul">
+<li>Now run the script.
+</li>
+<li>Try typing the following into your interpreter - <code>AND(0,0)</code>
+</li>
+<li>How about the following - <code>AND(1,1)</code>, <code>OR(1,1)</code>, <code>NOR(1,1)</code>
+</li>
+<li>You should see that each of the functions is acting as a logic gate.
+</li>
+<li>We can store the output of any of the functions using a variable.
+</li>
+<li><code>D = AND(1,0)</code> for instance.
+</li>
+<li>We can then pass that variable into another function.
+</li>
+<li>OR(D,1)
+</li>
+<li>Here is the full script for the Half-adder
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-python"><span style="color: #268bd2;">inputA</span> = 0
+<span style="color: #268bd2;">inputB</span> = 0
+
+<span style="color: #859900; font-weight: bold;">def</span> <span style="color: #268bd2;">AND</span>(A,B):
+    <span style="color: #859900; font-weight: bold;">return</span> A <span style="color: #859900; font-weight: bold;">and</span> B
+
+<span style="color: #859900; font-weight: bold;">def</span> <span style="color: #268bd2;">OR</span>(A,B):
+    <span style="color: #859900; font-weight: bold;">return</span> A <span style="color: #859900; font-weight: bold;">or</span> B
+
+<span style="color: #859900; font-weight: bold;">def</span> <span style="color: #268bd2;">NOT</span>(A):
+    <span style="color: #859900; font-weight: bold;">return</span> 1 - A
+
+<span style="color: #859900; font-weight: bold;">def</span> <span style="color: #268bd2;">NOR</span>(A,B):
+    <span style="color: #859900; font-weight: bold;">return</span> 1-(A <span style="color: #859900; font-weight: bold;">or</span> B)
+
+<span style="color: #859900; font-weight: bold;">def</span> <span style="color: #268bd2;">NAND</span>(A,B):
+    <span style="color: #859900; font-weight: bold;">return</span> 1 - (A <span style="color: #859900; font-weight: bold;">and</span> B)
+
+<span style="color: #859900; font-weight: bold;">def</span> <span style="color: #268bd2;">XOR</span>(A,B):
+    <span style="color: #859900; font-weight: bold;">return</span> A ^ B
+
+<span style="color: #268bd2;">output</span> = XOR(inputA,inputB)
+<span style="color: #268bd2;">carry</span> = AND(inputA,inputB)
+
+<span style="color: #859900; font-weight: bold;">print</span>(<span style="color: #2aa198;">'result ='</span>,output)
+<span style="color: #859900; font-weight: bold;">print</span>(<span style="color: #2aa198;">'carry ='</span>,carry)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-6-2" class="outline-3 try">
+<h3 id="sec-6-2">Try It</h3>
+<div class="outline-text-3" id="text-6-2">
+
+<ul class="org-ul">
+<li>Try running the script using different values for the inputA and inputB and check that it works the same as the circuit.
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-7" class="outline-2 activity">
+<h2 id="sec-7"><span class="section-number-2">7</span> Assessment</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-sec-7-1" class="outline-3 badge">
+<h3 id="sec-7-1">Badge It - Gold</h3>
+<div class="outline-text-3" id="text-7-1">
+<ul class="org-ul">
+<li><b>Remember</b> - you can pass the output from one function to another function.
+</li>
+</ul>
+<div class="org-src-container">
+
+<pre class="src src-python"><span style="color: #268bd2;">D</span> = AND(inputA,inputB)
+<span style="color: #268bd2;">E</span> = NOR(inputA,inputB)
+<span style="color: #268bd2;">outputF</span> = XOR(D,E)
+</pre>
+</div>
+<ul class="org-ul">
+<li>If you don't understand this then you'd best ask for some help from a peer or your teacher.
+</li>
+<li>To be awarded your Gold badge, you need to implement the Full Adder in code. Look at the circuit, and use it to help you pass the outputs of one function to another.
+</li>
+<li>Demonstrate your Python Full Adder to your teacher to get your badge.
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-8" class="outline-2 activity">
+<h2 id="sec-8"><span class="section-number-2">8</span> Assessment</h2>
+<div class="outline-text-2" id="text-8">
+</div>
+<div id="outline-container-sec-8-1" class="outline-3 badge">
+<h3 id="sec-8-1">Badge It - Platinum</h3>
+<div class="outline-text-3" id="text-8-1">
+
+
+
+<ul class="org-ul">
+<li>Here is the circuit for a Full Subtractor from Wikipedia
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/6/68/FullSubtractor.svg/640px-FullSubtractor.svg.png" alt="640px-FullSubtractor.svg.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>Use this circuit to construct a Full Subtractor in Python code. Demonstrate it to your teacher when you have finished it.
+</li>
+</ul>
 </div>
 </div>
 </div>
