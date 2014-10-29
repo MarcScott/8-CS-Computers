@@ -222,7 +222,7 @@
 :END:
 - Demonstrate that you can use the full binary adder.
 - Work in pairs. One of you should write down a binary addition to perform, and write down the results each time.
-- The other member of the pair should operate the adder. You should eb able to perform this without speaking.
+- The other member of the pair should operate the adder. You should be able to perform this without speaking.
 - Ask your teacher to provide you with a binary addition to perform and demonstrate your skills.
 - Here are some to practice on. =10 + 11=, =111 + 100=, =1010+1110=
 * Abstraction
@@ -246,7 +246,7 @@
 :HTML_CONTAINER_CLASS: learn
 :END:
 - We can simulate logic gates in computer code.
-- Create a new Python script using you're prefered text-editor or IDE (probably IDLE)
+- Create a new Python script using you're preferred text-editor or IDE (probably IDLE)
 - Now copy and paste in this code.
 #+BEGIN_SRC python
   def AND(A,B):
@@ -335,9 +335,6 @@ outputF = XOR(D,E)
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-
-
-
 - Here is the circuit for a Full Subtractor from Wikipedia
 [[http://upload.wikimedia.org/wikipedia/commons/thumb/6/68/FullSubtractor.svg/640px-FullSubtractor.svg.png]]
 - Use this circuit to construct a Full Subtractor in Python code. Demonstrate it to your teacher when you have finished it.

@@ -1,0 +1,135 @@
+#+STARTUP:indent
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil  
+#+TITLE: How A Computer Works
+#+AUTHOR: Marc Scott
+
+#+BEGIN_HTML
+<div class=ribbon>
+<a href="https://github.com/MarcScott/8-CS-Computers">Fork me on GitHub</a>
+</div>
+#+END_HTML
+
+* COMMENT Use as a template
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+
+** Research It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+
+** Design It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: design
+:END:
+
+** Build It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: build
+:END:
+
+** Test It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: test
+:END:
+
+** Run It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: run
+:END:
+
+** Document It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: document
+:END:
+
+** Code It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+
+** Program It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: program
+:END:
+
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+
+** Save It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: save
+:END:
+
+* Types of Computer
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+Computers come in many shapes and sizes, many of which you might not even recognise as being a computer.
+[[file:img/Montage.jpg]]
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- Modern computers are really hard to categorise as their are so many different types.
+- We can broadly try and fit a computer into one of the following categories, but some types of computer might blur the boundaries.
+  - Embedded computers - Small computers integrated into other technologies such as DVD players and Microwaves.
+  - Mobile Devices - Wearables, Smart Phones, Tablets, Handheld games consoles.
+  - Microcomputers - Desktops, Laptops and Notebooks, Games Consoles.
+  - Servers - larger computers used to 'serve' files, webpages and emails to client computers.
+  - Supercomputers - very powerful computers, usually dedicated to performing single types of tasks.
+** Research It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+- Use the web to find a description of each of the types of computer that are listed above.
+- Find a picture of each of the class of computer listed above
+** Document It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: document
+:END:
+- In your markdown document write a description and include a picture for each of the classes of computer above.
+- Make sure you understand what you are writing. Your teacher may ask you questions about what you have written to ensure you understand it.4
+* Assessment
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Badge It - Silver
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+- Choose a type computer from one of the examples in the categories above.
+- You might choose Wearable computers or Mobile Phones for example.
+- Conduct some more in-depth research and document your findings in your Markdown file.
+- Try to find out about...
+  1. The popularity of the technology
+  2. The cost of the technology
+  3. The uses and features of the technology
+** Badge It - Gold
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+- Include the following details...
+  1. The specifications of the technology (size, screen resolution, processor power, memory)
+  2. The software that runs on the technology
+** Badge It - Platinum
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+- As security is important, to get your platinum badge, look into the security features of the device. Find out if there are any forms of malware that can affect it, how it protects the user's data, or whether the device can be hacked.
+
+
