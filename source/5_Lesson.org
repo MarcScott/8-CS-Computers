@@ -1,4 +1,4 @@
- #+STARTUP:indent
+#+STARTUP:indent
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
 #+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
 #+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil  
@@ -74,8 +74,7 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: save
 :END:
-
-* What is a computer?
+* Storing Bits
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
@@ -83,90 +82,50 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-- Data is a collection of facts, such as values or measurements.
-- It can be numbers, words, measurements, observations or even just descriptions of things
-- A computer is an electronic device that can store, retrieve, and process data.
-** Research It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: research
-:END:
-- Computers are composed of Hardware and Software.
-- Use the web to find definitions of Hardware and Software and examples of each. Keep a note of what you find out. You're going to need to write it up.
-** Document It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: document
-:END:
-- You're going to write your project up using Markdown.
-- Like HTML, Markdown is a markup language (Confusing names are common in computing)
-- You can write in Markdown and then use a parser to convert it to other formats such as HTML, PDF or even docx.
-* Using Markdown
+- You've seen how logic gates can be used to perform some simple calculations such as adding bits together and maybe even subtracting bits.
+- In order to do anything useful, computers need to be able to stroe the bits though.
+- You may have seen in an earlier assessment how NAND gates can be used to store bits using an arrangement known as a D-Latch.
+- Using logic gates to store bits is useful if the computer needs really fast access to the data. This type of memory is known as cache memory.
+- For longer term storage of data, computers use volatile and non-volatile storage.
+* A Nibble or a Byte of a Word
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
-:END:      
+:END:
 ** Learn It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-- Markdown has it's own syntax - /an arrangement of words and symbols specific to a language./
-- The best way to learn Markdown is to write some.
-- Use a text editor to create a new document and call it Markdown-Cheatsheet.md
-- Now let's write a line of Markdown.
-#+BEGIN_SRC markdown
-# This is a level 1 heading
-#+END_SRC
-- Now save the file.
-- We'll need to use a parser to turn our markdown into something else. Your teacher will show you how to do this.
+- Storage is measured in bits. This is the number of 1s and 0s that the storage can potentially hold.
+- A single bit is not a very useful measure, as there's not much a computer can do with just a 1 or a 0
+- Sometimes we talk in terms of a *nibble* of data. A nibble is 4 bits - =1001= for instance.
+- More usefully we use the term *byte*, which is 8 bits - =10101010=.
+- Sometimes we talk of a *word* which is can be 8, 16, 32 or 64 bits. You'll see why later.
+- Even then, a few bytes of data is far to small, when we are talking about the capacity of modern storage devices.
+- The webpage for last lesson is stored on a server and takes up 25,000 bytes. We use the standard prefix /kilo/ to represent 1000, so this becomes 25kB.
+- We can keep going up, in thousands, to describe the quantities of data. Below is a table with some examples.
+|               bytes | value       | prefix | symbol | example                                                            |
+|---------------------+-------------+--------+--------+--------------------------------------------------------------------|
+|                1000 | thousand    | kilo   | kB     | Words in this document up to this point - 10kB                     |
+|             1000000 | million     | mega   | MB     | A song in MP3 format - 8MB                                         |
+|          1000000000 | billion     | giga   | GB     | An HD movie on Blu-ray - 27GB                                      |
+|       1000000000000 | trillion    | tera   | TB     | The back up of Wikipedia is around 4TB of data                     |
+|    1000000000000000 | quadrillion | peta   | PB     | Facebook stores around 400PB of photos                             |
+| 1000000000000000000 | quintillion | exa    | EB     | The annual global exchange of data on the internet is around 950EB |
+* Non-volatile storage
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
 ** Learn It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-- So that's level 1 headings sorted. Let's add some more Markdown to our document. You can copy and paste this if you like.
-#+BEGIN_SRC markdown
-## This is a level 2 heading
-### Obviously this is level 3
-
-Unordered lists are cool
-
-+ Here's the first bullet
-+ And the second
-+ Okay, let's have three
-
-As are ordered lists
-
-1. A numbered list would be good
-1. It doesn't matter what numbers you used.
-1. In Markdown the sequence will climb by one
-9. Even if you add weird numbers
-6. Like this
-
-We can add horizontal rules like this 
-
-- - -
-
-And we can get code blocks by using tabs (or 4 spaces)
-
-    var i = 10;
-    console.log('Some statement')
-
-Sometimes it's nice to get a *little* emphasis, though sometimes you want a **lot**
-
-Sometimes we might want a link
-
-[Daring Fireball Markdown Syntax](http://daringfireball.net/projects/markdown/syntax)
-
-Sometimes we might want an image
-
-![Daring Fireball Logo](http://daringfireball.net/graphics/logos/)
-
-#+END_SRC
-- Send the document through your parser and have a look at the result. Keep hold of this document as it'll be a good reference guid for you in the future.
-* Starting your projects
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: activity
-:END:      
-- [[file:doc/How-Computers-Work.md][Download this file]]
-- You can use this as a guide for your write up.
-- Open it up in a text editor and have a quick scan through
+- Non-volatile memory stores data without needing to be permenantly powered.
+- Examples of non-volatile memory are
+  - Solid State Hard drives and Flash memory
+  - Magnetic Hard disks
+  - Optical discs such as Blu-ray, DVDs and CDs
+- Solid state hard drives use NAND gates with special transistors that hold their charge to store bits of information.
+- Magnetic disks and Optical discs are different though.
 * Assessment
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
@@ -175,17 +134,55 @@ Sometimes we might want an image
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- Edit the top of the document to show the correct author and date
-- Add a description for Hardware and Software in the appropriate places
-- Run the document through your parser and show the output to your teacher.
+- Conduct some research and learn how Magnetic disks and Optical discs are able to store bits.
+- Make sure you include the capacity (maximum amount of data they can hold) of the disks or discs.
+- Present your findings in a suitable format for assessment.
+* Volatile storage
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- Volatile storage is only able to store bits while it is being powered.
+- Volatile storage is often called /Primary Storage/ or /Random Access Memory (RAM)/.
+- There are two main types of RAM. /Static RAM (SRAM)/ and /Dynamic RAM (DRAM/
+- SRAM is fast and expensive and is used to hold bits for short periods of time before operations are carried out on them like addition and subtraction. The D-Latch arrangement of NAND gates is a typical memory cell capable of holding a single bit of data inside SRAM. We normally call this type of memory /Cache/.
+- DRAM is slower and cheaper. DRAM is often simply called RAM and is used to store instructions for the computer and for storing bits of data for slightly longer peiods.
+- If you were to run the following script...
+#+BEGIN_SRC python
+x = 4
+y = 5
+z = x + y
+#+END_SRC
+- the values of x and y would be stored in DRAM, as well as the instruction to add the numbers together, followed by instructions to store the value of z in DRAM as well.
+- A single memory cell in RAM (that can hold 1 bit) is made up of some transistors and a capacitor. The capacitor can hold charge for a short amount of time, but quickly drains and needs to be constantly recharged.
+* Volatile storage
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- Inside DRAM there are rows and columns of memory cells, each capable of holding 1 bit of data.
+- Below you can see a simplification for how RAM works
+#+BEGIN_HTML
+<object data="js/RAM.html" width='100%' height='600px'></object>
+#+END_HTML
+
+* Assessment
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
 ** Badge It - Gold
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- Include links and images into your descriptions for Hardware and Software, as well as ensuring your descriptions include examples.
+
 ** Badge It - Platinum
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- Wow your teacher with your thorough understanding of the varieties of hardware and software, and show a deep understanding of what the two things are.
 
