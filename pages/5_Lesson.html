@@ -167,7 +167,7 @@ for the JavaScript code in this tag.
 <li><a href="#sec-5-1">Learn It</a></li>
 </ul>
 </li>
-<li><a href="#sec-6">6. Volatile storage</a>
+<li><a href="#sec-6">6. RAM</a>
 <ul>
 <li><a href="#sec-6-1">Learn It</a></li>
 </ul>
@@ -195,11 +195,9 @@ for the JavaScript code in this tag.
 <ul class="org-ul">
 <li>You've seen how logic gates can be used to perform some simple calculations such as adding bits together and maybe even subtracting bits.
 </li>
-<li>In order to do anything useful, computers need to be able to stroe the bits though.
+<li>In order to do anything useful, computers need to be able to store the bits though.
 </li>
 <li>You may have seen in an earlier assessment how NAND gates can be used to store bits using an arrangement known as a D-Latch.
-</li>
-<li>Using logic gates to store bits is useful if the computer needs really fast access to the data. This type of memory is known as cache memory.
 </li>
 <li>For longer term storage of data, computers use volatile and non-volatile storage.
 </li>
@@ -223,7 +221,7 @@ for the JavaScript code in this tag.
 </li>
 <li>More usefully we use the term <b>byte</b>, which is 8 bits - <code>10101010</code>.
 </li>
-<li>Sometimes we talk of a <b>word</b> which is can be 8, 16, 32 or 64 bits. You'll see why later.
+<li>Sometimes we talk of a <b>word</b> which can be 8, 16, 32 or 64 bits. You'll see why later.
 </li>
 <li>Even then, a few bytes of data is far to small, when we are talking about the capacity of modern storage devices.
 </li>
@@ -303,6 +301,14 @@ for the JavaScript code in this tag.
 <td class="left">EB</td>
 <td class="left">The annual global exchange of data on the internet is around 950EB</td>
 </tr>
+
+<tr>
+<td class="right">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -319,14 +325,14 @@ for the JavaScript code in this tag.
 <li>Non-volatile memory stores data without needing to be permenantly powered.
 </li>
 <li>Examples of non-volatile memory are
-<ul class="org-ul">
+<ol class="org-ol">
 <li>Solid State Hard drives and Flash memory
 </li>
 <li>Magnetic Hard disks
 </li>
 <li>Optical discs such as Blu-ray, DVDs and CDs
 </li>
-</ul>
+</ol>
 </li>
 <li>Solid state hard drives use NAND gates with special transistors that hold their charge to store bits of information.
 </li>
@@ -392,7 +398,7 @@ for the JavaScript code in this tag.
 </div>
 </div>
 <div id="outline-container-sec-6" class="outline-2 activity">
-<h2 id="sec-6"><span class="section-number-2">6</span> Volatile storage</h2>
+<h2 id="sec-6"><span class="section-number-2">6</span> RAM</h2>
 <div class="outline-text-2" id="text-6">
 </div>
 <div id="outline-container-sec-6-1" class="outline-3 learn">
@@ -401,14 +407,43 @@ for the JavaScript code in this tag.
 <ul class="org-ul">
 <li>Inside DRAM there are rows and columns of memory cells, each capable of holding 1 bit of data.
 </li>
+<li>A memory cell consists of some transistors and a capacitor. Capacitors can hold charge, but drain quickly.
+</li>
 <li>Below you can see a simplification for how RAM works
 </li>
 </ul>
 <object data="js/RAM.html" width='100%' height='500px'></object>
+<ul class="org-ul">
+<li>The diagram show RAM with a <i>word</i> size of 16. That means that each row contains 16 cells.
+</li>
+<li>If we want to add some data into the RAM, we need to choose where to put it.
+</li>
+<li>Computers use <i>addresses</i> to indicate where in the RAM the data will be stored. In this example each address consists of 8 memory cells, so it can hold 1 byte of data.
+</li>
+<li>Modern computers usually have 32 or 64 bit address spaces, but such an example wouldn't fit on the webpage.
+</li>
+<li>Memory addresses are numbered. The first memory address is 0, the second is 1, the third is 10 and the fourth is 11.
+</li>
+<li>Have a go at typing an address in binary into the Address input box and hit submit.
+</li>
+<li>You should see the numbers in the  top and left bar change colour, indicating where the address is.
+</li>
+<li>To write data to that address we need to open the correct row and then send current down the correct columns to charge the memory cells.
+</li>
+<li>Type in an 8-bit binary number into the data box and then hit submit.
+</li>
+<li>You should see the rows and columns turn red to indicate that current is flowing through them. The cells should also turn red to indicate that they are holding charge.
+</li>
+<li>Now select a new address and wrtie some data to it.
+</li>
+<li>The memory cells from the previous write should still be red, as they'll hold the charge for a short peiod of time. However, they'll need to be frequently recharged to keep the data.
+</li>
+<li>RAM can be read by detecting whether the tiny capacitors are more than 50% charged. If they are then the cell is holding a 1, otherwise they're holding a 0.
+</li>
+</ul>
 </div>
 </div>
 </div>
-
 <div id="outline-container-sec-7" class="outline-2 activity">
 <h2 id="sec-7"><span class="section-number-2">7</span> Assessment</h2>
 <div class="outline-text-2" id="text-7">
@@ -418,6 +453,7 @@ for the JavaScript code in this tag.
 <div class="outline-text-3" id="text-7-1">
 </div>
 </div>
+
 
 <div id="outline-container-sec-7-2" class="outline-3 badge">
 <h3 id="sec-7-2">Badge It - Platinum</h3>
