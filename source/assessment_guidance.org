@@ -82,25 +82,24 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: document
 :END:
+---------
 - Knows that digital computers use binary to represent all data. (AB)
 - Understands how bit patterns represent numbers. (AB)
 - Knows that computers transfer data in binary. (AB)
 - Understands the relationship between binary and file size (uncompressed). (AB)
-
 - Understands the von Neumann architecture in relation to the fetch- execute cycle, including how data is stored in memory. (AB) (GE)
 - Understands the basic function and operation of location addressable memory.(AB)
 - Performs simple operations using bit patterns e.g. binary addition. (AB) (AL)
-
 - Understands the relationship between binary and electrical circuits, including Boolean logic. (AB)
-
+-------------
 - Below guidance has been provided for the award of badges.
 | <40>                                     | <40>                                     | <40>                                     | <40>                                     |
-|       Lesson Title                       | Silver                                   | Gold                                     | Platinum                                 |
+| Lesson Title                             | Silver                                   | Gold                                     | Platinum                                 |
 |------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------|
 | Beautiful Binary                         | Convert between binary and denary        | Convert between denary and binary        | Perform simple binary addition           |
 | Tiny Transistors and nano NANDS          | Understand that transistors can act as switches | Understand how transistors can form NAND gates | Draw transistor arrangements for other gates |
 | CombiNANDS                               | Predict outputs from simple NANDS combinations | Understand how NANDS can combine to form AND, OR and XOR gates | Understand how a D-Latch and adder work  |
 | Lovely Logic                             | Use a Full Adder to perform calculations | Implement a Full Adder in code           | Implement a Subtractor in code           |
-| Volatile and Non-volatile storage        | Understand the terms bit, nibble, byte.  | Understand how text is represented by binary s | Understand how images can be stored as binary |
+| Volatile and Non-volatile storage        | Understand how optical and magnetic storage can store data | Understand how data can be written into RAM | Understand how data can be read from RAM |
 | CPU operations                           | Know that RAM stores CPU instructions    | Understand the basics of Von Neumann architecture | Be able to describe the basics of the fetch-execute cycle |
 | The write up                             |                                          |                                          |                                          |

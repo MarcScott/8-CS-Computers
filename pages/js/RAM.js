@@ -16,6 +16,8 @@ function setup(){
     Cells = []
     CAS = []
     RAS = []
+
+    //Populate arrays with cells and lines.
     for(var i = 0;i<16;i++){
 	Cells.push([])
 	CAS.push(new bitLine(i * 30 + 50,false))
@@ -27,12 +29,10 @@ function setup(){
 	RAS.push(new wordLine(i * 30 + 50, false))
     }
 
-    //CAS Bar
-
-
     //Set up the input for address
     addressIn = createInput();
     addressIn.position(50, 430);
+
     submitAddress = createButton('submit');
     submitAddress.position(190, 430);
     submitAddress.mousePressed(getAddress);
@@ -42,7 +42,7 @@ function setup(){
     submitData = createButton('submit');
     submitData.position(390, 430);
     submitData.mousePressed(powerUp);
-
+    //button to clear arrays
     wipeData = createButton('Wipe');
     wipeData.position(450, 430);
     wipeData.mousePressed(wipe);
@@ -107,7 +107,6 @@ function powerUp(){
 	CAS[bit].state = !!+dataIn.value()[i]
 	Cells[bit][wordLineToWrite].state = !!+dataIn.value()[i]
     }
-    
 }
 
 //wipe the bits when wipe button pushed
@@ -135,19 +134,19 @@ function getAddress(){
     //powerUp('01000010',wordLineToWrite,bitLineToWrite)
 }
 
-
-
 function draw(){
     background(255);
-
-    //address = findAddress(binaryAddress);
-    //data = '1001011'
-    //column = address[0];
-    //row = address[1];
-    //writeData(data,row,column);
-    //RAS[row].state = true;
-    
-    //draw the CAS
+    textSize(20);
+    fill(20,20,20)
+    text('CAS',550,30)
+    push()
+    rotate(HALF_PI)
+    translate(420,-15)
+    text('RAS',0,0)
+    pop()
+    text('Address',80,430);
+    text('Data',280,430);    
+     //draw the CAS
     for(var i = 0; i<CAS.length; i++){
 	CAS[i].display()
     }
@@ -161,31 +160,34 @@ function draw(){
 	    Cells[i][j].display()
 	}
     }
+     
+
+
     //CAS BAR
     noStroke()
-    textAlign(CENTER)
-    textSize(15)
-    fill(40,40,200)
+    fill(70,70,170)
     rect(40,5,500,30)
+
     //RAS BAR
     rect(5,40,30,370)
+
     //labels
-    fill(200,40,40)
+    textAlign(CENTER)
+    textSize(15)
+    fill(255,255,255)
     for(var i = 0;i<16;i++){
 	if(bitLineToWrite === i){
 	    fill(40,200,40)
 	}
 	text(i+1,i*30+50,30)
-	fill(200,40,40)
+	fill(255,255,255)
     }
     for(var i = 0;i<12;i++){
 	if(wordLineToWrite === i){
 	    fill(40,200,40)
 	}
 	text(i+1,25,i*30+55)
-	fill(200,40,40)
+	fill(255,255,255)
     }
-    
-
-
+    stroke(0,0,0)
 }

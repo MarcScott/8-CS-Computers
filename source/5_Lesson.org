@@ -83,9 +83,8 @@
 :HTML_CONTAINER_CLASS: learn
 :END:
 - You've seen how logic gates can be used to perform some simple calculations such as adding bits together and maybe even subtracting bits.
-- In order to do anything useful, computers need to be able to stroe the bits though.
+- In order to do anything useful, computers need to be able to store the bits though.
 - You may have seen in an earlier assessment how NAND gates can be used to store bits using an arrangement known as a D-Latch.
-- Using logic gates to store bits is useful if the computer needs really fast access to the data. This type of memory is known as cache memory.
 - For longer term storage of data, computers use volatile and non-volatile storage.
 * A Nibble or a Byte of a Word
 :PROPERTIES:
@@ -99,7 +98,7 @@
 - A single bit is not a very useful measure, as there's not much a computer can do with just a 1 or a 0
 - Sometimes we talk in terms of a *nibble* of data. A nibble is 4 bits - =1001= for instance.
 - More usefully we use the term *byte*, which is 8 bits - =10101010=.
-- Sometimes we talk of a *word* which is can be 8, 16, 32 or 64 bits. You'll see why later.
+- Sometimes we talk of a *word* which can be 8, 16, 32 or 64 bits. You'll see why later.
 - Even then, a few bytes of data is far to small, when we are talking about the capacity of modern storage devices.
 - The webpage for last lesson is stored on a server and takes up 25,000 bytes. We use the standard prefix /kilo/ to represent 1000, so this becomes 25kB.
 - We can keep going up, in thousands, to describe the quantities of data. Below is a table with some examples.
@@ -111,6 +110,7 @@
 |       1000000000000 | trillion    | tera   | TB     | The back up of Wikipedia is around 4TB of data                     |
 |    1000000000000000 | quadrillion | peta   | PB     | Facebook stores around 400PB of photos                             |
 | 1000000000000000000 | quintillion | exa    | EB     | The annual global exchange of data on the internet is around 950EB |
+|                     |             |        |        |                                                                    |
 * Non-volatile storage
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
@@ -121,9 +121,9 @@
 :END:
 - Non-volatile memory stores data without needing to be permenantly powered.
 - Examples of non-volatile memory are
-  - Solid State Hard drives and Flash memory
-  - Magnetic Hard disks
-  - Optical discs such as Blu-ray, DVDs and CDs
+  1. Solid State Hard drives and Flash memory
+  2. Magnetic Hard disks
+  3. Optical discs such as Blu-ray, DVDs and CDs
 - Solid state hard drives use NAND gates with special transistors that hold their charge to store bits of information.
 - Magnetic disks and Optical discs are different though.
 * Assessment
@@ -158,7 +158,7 @@ z = x + y
 #+END_SRC
 - the values of x and y would be stored in DRAM, as well as the instruction to add the numbers together, followed by instructions to store the value of z in DRAM as well.
 - A single memory cell in RAM (that can hold 1 bit) is made up of some transistors and a capacitor. The capacitor can hold charge for a short amount of time, but quickly drains and needs to be constantly recharged.
-* Volatile storage
+* RAM
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
@@ -167,11 +167,24 @@ z = x + y
 :HTML_CONTAINER_CLASS: learn
 :END:
 - Inside DRAM there are rows and columns of memory cells, each capable of holding 1 bit of data.
+- A memory cell consists of some transistors and a capacitor. Capacitors can hold charge, but drain quickly.
 - Below you can see a simplification for how RAM works
 #+BEGIN_HTML
-<object data="js/RAM.html" width='100%' height='600px'></object>
+<object data="js/RAM.html" width='100%' height='500px'></object>
 #+END_HTML
-
+- The diagram show RAM with a /word/ size of 16. That means that each row contains 16 cells.
+- If we want to add some data into the RAM, we need to choose where to put it.
+- Computers use /addresses/ to indicate where in the RAM the data will be stored. In this example each address consists of 8 memory cells, so it can hold 1 byte of data.
+- Modern computers usually have 32 or 64 bit address spaces, but such an example wouldn't fit on the webpage.
+- Memory addresses are numbered. The first memory address is 0, the second is 1, the third is 10 and the fourth is 11.
+- Have a go at typing an address in binary into the Address input box and hit submit.
+- You should see the numbers in the  top and left bar change colour, indicating where the address is.
+- To write data to that address we need to open the correct row and then send current down the correct columns to charge the memory cells.
+- Type in an 8-bit binary number into the data box and then hit submit.
+- You should see the rows and columns turn red to indicate that current is flowing through them. The cells should also turn red to indicate that they are holding charge.
+- Now select a new address and wrtie some data to it.
+- The memory cells from the previous write should still be red, as they'll hold the charge for a short peiod of time. However, they'll need to be frequently recharged to keep the data.
+- RAM can be read by detecting whether the tiny capacitors are more than 50% charged. If they are then the cell is holding a 1, otherwise they're holding a 0.
 * Assessment
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
@@ -181,8 +194,12 @@ z = x + y
 :HTML_CONTAINER_CLASS: badge
 :END:
 
+- Use screen shots of the the RAM simulation to describe the process by which data can be stored in RAM.
+- Ensure that you use the following key words: /memory cell/, /word/, /address/, /capacitor/.
 ** Badge It - Platinum
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
 
+- Conduct some research and learn how data can be read from the memory cells in RAM.
+- Present your findings in a suitable form.
