@@ -140,7 +140,7 @@ It is therefore very probable that the Indo-European, Semitic and Mongolian word
   1. Click on the cards to flip them until you have the correct number of spots showing, equal to the denary number you are trying to convert.
   2. Read off the binary number (ignoring preceding 0's) that are displayed below.
 #+BEGIN_HTML
-<object data="js/binary-denary.html" width='600px' height='250px'></object>
+<object data="js/binary-denary.html" width='350px' height='250px'></object>
 #+END_HTML
 - Try converting 1001 from binary into denary, you should get the number 9
 - Try converting 19 from denary into binary, you should get the number 10011
