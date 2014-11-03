@@ -4,8 +4,8 @@ var z = 0;
 var reset = false;
 
 function setup(){
-    createCanvas(800, 100);
-    frameRate(30)
+    createCanvas(600, 100);
+    frameRate(15)
 }
 
 function draw(){

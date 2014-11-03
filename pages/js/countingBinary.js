@@ -4,7 +4,7 @@ var reset = false;
 
 function setup(){
     createCanvas(600, 100);
-    frameRate(30)
+    frameRate(15)
 }
 
 function draw(){

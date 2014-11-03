@@ -124,7 +124,7 @@ It is therefore very probable that the Indo-European, Semitic and Mongolian word
 #+END_HTML
 - You can compare binary and denary numbers below.
 #+BEGIN_HTML
-<object data="js/countingBoth.html" width='800px' height='100px'></object>
+<object data="js/countingBoth.html" width='600px' height='100px'></object>
 #+END_HTML
 ** Try It
 :PROPERTIES:

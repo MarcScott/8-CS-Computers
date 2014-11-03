@@ -99,7 +99,7 @@
 - Sometimes we talk in terms of a *nibble* of data. A nibble is 4 bits - =1001= for instance.
 - More usefully we use the term *byte*, which is 8 bits - =10101010=.
 - Sometimes we talk of a *word* which can be 8, 16, 32 or 64 bits. You'll see why later.
-- Even then, a few bytes of data is far to small, when we are talking about the capacity of modern storage devices.
+- Even then, a few bytes of data is far too small, when we are talking about the capacity of modern storage devices.
 - The webpage for last lesson is stored on a server and takes up 25,000 bytes. We use the standard prefix /kilo/ to represent 1000, so this becomes 25kB.
 - We can keep going up, in thousands, to describe the quantities of data. Below is a table with some examples.
 |               bytes | value       | prefix | symbol | example                                                            |
@@ -182,7 +182,7 @@ z = x + y
 - To write data to that address we need to open the correct row and then send current down the correct columns to charge the memory cells.
 - Type in an 8-bit binary number into the data box and then hit submit.
 - You should see the rows and columns turn red to indicate that current is flowing through them. The cells should also turn red to indicate that they are holding charge.
-- Now select a new address and wrtie some data to it.
+- Now select a new address and write some data to it.
 - The memory cells from the previous write should still be red, as they'll hold the charge for a short peiod of time. However, they'll need to be frequently recharged to keep the data.
 - RAM can be read by detecting whether the tiny capacitors are more than 50% charged. If they are then the cell is holding a 1, otherwise they're holding a 0.
 * Assessment
