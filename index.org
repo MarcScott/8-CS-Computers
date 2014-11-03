@@ -37,6 +37,10 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: link-heading
 :END:
+* [[file:pages/TeacherSlides.html][Teacher Slides]]
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: link-heading
+:END:
 * [[file:pages/assessment_guidance.html][Assessment]]
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: link-heading
