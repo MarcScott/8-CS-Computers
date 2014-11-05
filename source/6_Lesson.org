@@ -74,16 +74,29 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: save
 :END:
-* Storing Bits
+* The Little Man Computer
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
 ** Learn It
+- Below is a simulation of how a CPU can carry out instructions.
+- You can type commands into the RAM addresses, and the virtual CPU will execute them.
+- Here are a list of the commands that can be accepted.
+  - 1xx =Add value in address xx to the value in the accumulator=
+  - 2xx =Subtract value in address xx from the value in the accumulator=
+  - 3xx =Store the value of the accumulator to address xx=
+  - 5xx =Load the value from address xx to the accumulator=
+  - 6xx =Set the program counter to address xx==
+  - 7xx =If the accumulator contains the value 0 then set the counter to address xx=
+  - 8xx =If the accumulator contains a value greater than 0 then set the counter to address xx=
+  - 901 =Store user input into the accumulator=
+  - 902 =Output the value in the accumulator=
+  - 000 =Halt the program=
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
 #+BEGIN_HTML
-<object data="http://www.yorku.ca/sychen/research/LMC/LittleMan.html" width='1000px' height='1000px'></object>
+<object data="js/LMC.html" width='100%' height='600px'></object>
 #+END_HTML
 * Assessment
 :PROPERTIES:
