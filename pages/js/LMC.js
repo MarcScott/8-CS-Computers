@@ -56,6 +56,10 @@ function run(){
 	    console.log('SET TO WHITE')
 	}
 	document.getElementById('ramtable').rows[row].cells[column].style.backgroundColor = 'green'
+	document.getElementById("PC").innerHTML = PC;
+	document.getElementById("memAdd").innerHTML = memAdd;
+	document.getElementById("memData").innerHTML = memData;
+	document.getElementById("Accu").innerHTML = Accu;
 	
 	var instruction = ram[PC]
 	if(instruction == null || instruction == undefined || instruction[0] == '0'){
