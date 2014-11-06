@@ -8,7 +8,7 @@ var Output = 0;
 var initialRAM = []
 var ram = []
 
-
+//Clear all addresses to 000
 function WipeAll(){
     for(var i = 0;i<20;i++){
 	for(var j = 0;j<5;j++){
@@ -18,6 +18,7 @@ function WipeAll(){
     }
 }
 
+//Reset back to programmed state
 function reset(){
     console.log('RESET CALLED');
     for(var i = 0;i<20;i++){
@@ -27,6 +28,7 @@ function reset(){
     }
 }
 
+//Load the program from RAM addresses into an array
 function RAMtoArray(){
     var RAMarray = []
     var RAMrows =  document.getElementById('ramtable').rows
@@ -39,32 +41,41 @@ function RAMtoArray(){
     return RAMarray
 }
 
+function feedbacktoUser(){
+    var row = Math.floor((PC)/5)
+    var column = (PC)%5
+    document.getElementById('ramtable').rows[row].cells[column].style.backgroundColor = 'green'
+    //Locate the last address that was run by the program counter
 
+    var previousRow = Math.floor((PC-1)/5)
+    var previousColumn = (PC-1)%5
+    if(PC>0){
+	//reset previous address to white
+	document.getElementById('ramtable').rows[previousRow].cells[previousColumn].style.backgroundColor = 'white'
+    }
+    //set the colour of the address being read to green
+    document.getElementById('ramtable').rows[row].cells[column].style.backgroundColor = 'green'
+    //provide information to the DOM
+    document.getElementById("PC").innerHTML = PC;
+    document.getElementById("memAdd").innerHTML = memAdd;
+    document.getElementById("memData").innerHTML = memData;
+    document.getElementById("Accu").innerHTML = Accu;
+}
+    
+
+//Run the program
 function run(){
     ram = RAMtoArray()
+    //duplicate program to enable reset
     initialRAM = ram.slice(0);
-    
+    //setInterval loop to be able to view program functioning
     var programLoop = setInterval(function(){
-	var row = Math.floor(PC/5)
-	var column = PC%5
-	var previousRow = Math.floor((PC-1)/5)
-	var previousColumn = (PC-1)%5
-	if(PC>0){
-	    console.log('PREVIOUS ROW ='+previousRow)
-	    console.log('PREVIOUS COLUMN ='+previousColumn)
-	    document.getElementById('ramtable').rows[previousRow].cells[previousColumn].style.backgroundColor = 'white'
-	    console.log('SET TO WHITE')
-	}
-	document.getElementById('ramtable').rows[row].cells[column].style.backgroundColor = 'green'
-	document.getElementById("PC").innerHTML = PC;
-	document.getElementById("memAdd").innerHTML = memAdd;
-	document.getElementById("memData").innerHTML = memData;
-	document.getElementById("Accu").innerHTML = Accu;
-	
+	feedbacktoUser()
+	//Feed the instructions to the appropriate function
 	var instruction = ram[PC]
+	setTimeout(function(){
 	if(instruction == null || instruction == undefined || instruction[0] == '0'){
 	    clearInterval(programLoop);
-	    
 	}
 	else if(instruction[0] =='1'){
 	    add(+instruction.slice(1,3))
@@ -103,66 +114,13 @@ function run(){
 		document.getElementById('ramtable').rows[i].cells[j].children[0].value = ram[i*5+j];
 	    }
 	}
+	},10);
 
 
     }, 1000);
-    
     PC = 0
 }
-/*
-function run(){
-    ram = RAMtoArray()
-    initialRAM = ram.slice(0);
-    var HALT = false;
-    while(HALT == false){
-	document.getElementById('ramtable').rows[Math.floor(PC/5)].cells[PC-Math.floor(PC/5)].style.backgroundColor = 'green'
-	var instruction = ram[PC]
-	if(instruction == null || instruction == undefined || instruction[0] == '0'){
-	    HALT = true;
-	}
-	else if(instruction[0] =='1'){
-	    add(+instruction.slice(1,3))
-	}
-	else if(instruction[0] == '2'){
-	    subtract(+instruction.slice(1,3))
-	}
-	else if(instruction[0] == '3'){
-	    store(+instruction.slice(1,3))
-	}
-	else if(instruction[0] == '5'){
-	    load(+instruction.slice(1,3))
-	}
-	else if(instruction[0] == '6'){
-	    PC = (+instruction.slice(1,3))
-	}
-	else if(instruction[0] == '7'){
-	    branchZero(+instruction.slice(1,3))
-	}
-	else if(instruction[0] == '8'){
-	    branchGreater(+instruction.slice(1,3))
-	}
-	else if(instruction[0] == '9'){
-	    InOut(+instruction.slice(1,3))
-	}
-	else if(PC > 99){
-	    HALT = true;
-	}
-	else{
-	    window.alert('Error processing instruction at '+PC)
-	    HALT = true;
-	}
-	PC++
-	for(var i = 0;i<20;i++){
-	    for(var j = 0;j<5;j++){
-		document.getElementById('ramtable').rows[i].cells[j].children[0].value = ram[i*5+j];
-	    }
-	}
-
-    }
-    PC = 0
-}
-*/
-
+//Functions for each instruction type
 function add(address){
     memAdd = address
     memData = memData + ram[address]
@@ -173,10 +131,10 @@ function subtract(address){
     memAdd = address
     memData = memData - ram[address]
     console.log(memData)
-    console.log('Hello')
 }
 
 function store(address){
+
     memAdd = address
     ram[address] = memData
     console.log(memData)
@@ -204,6 +162,7 @@ function branchGreater(address){
 }
 
 function InOut(address){
+
     if(address == 1){
 	memData = parseInt(window.prompt('Requires input'),10)
     }
@@ -213,6 +172,7 @@ function InOut(address){
     console.log(address)
 }
 
+//Onload, fill the ramtable with 000
 window.onload = function(){
     for(var i = 0;i<20;i++){
 	for(var j = 0;j<5;j++){

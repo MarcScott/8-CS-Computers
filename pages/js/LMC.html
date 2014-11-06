@@ -3,28 +3,64 @@
     <script language="javascript" src="LMC.js"></script>
     
     <style>
+     #leftAddresses{
+       float:left;
+       table-layout:fixed;
+       width:20px;
+       font-size:11px;
+     }
+     #leftAddresses td{
+       padding:4px;
+       border:2px solid black;
+       background-color:#C0C0C0;
+       }
     #ramtable{
        float: left;
-       border: 1px solid black;
        table-layout: fixed;
        width: 200px;
      }
 
      #ramtable th, td {
+       background-color:#C0C0C0;
        overflow: hidden;
        width: 25px;
      }
 
      #CPU{
-       
-       margin-left:40px;
-       padding-left:20px;
-       border: 4px solid blue;
+       margin-left:300px;
+       padding:10px;
+       padding-top:200px;
+       width:260px;
+     }
+     #CPU td{
+       background-color:#C0C0C0;
        }
     </style>
   </head>
   <body>
-
+    <table id='leftAddresses'>
+      <tr><td>0</td></tr>
+      <tr><td>5</td></tr>
+      <tr><td>10</td></tr>
+      <tr><td>15</td></tr>
+      <tr><td>20</td></tr>
+      <tr><td>25</td></tr>
+      <tr><td>30</td></tr>
+      <tr><td>35</td></tr>
+      <tr><td>40</td></tr>
+      <tr><td>45</td></tr>
+      <tr><td>50</td></tr>
+      <tr><td>55</td></tr>
+      <tr><td>60</td></tr>
+      <tr><td>65</td></tr>
+      <tr><td>70</td></tr>
+      <tr><td>75</td></tr>
+      <tr><td>80</td></tr>
+      <tr><td>85</td></tr>
+      <tr><td>90</td></tr>
+      <tr><td>95</td></tr>
+      
+    </table>
     <table id='ramtable'>
       <tr>
         <td><input type="number"></td>
@@ -168,22 +204,27 @@
     </table>
 
     <p>
-      <input type="button" onclick="run()" value="RUN">
-      <input type="button" onclick="WipeAll()" value="CLEAR">
-      <input type="button" onclick="reset()" value="RESET">
+
       <table id="CPU">
+	<tr>
+	  <td>
+	  <input type="button" onclick="run()" value="RUN">
+	  <input type="button" onclick="WipeAll()" value="CLEAR">
+	  <input type="button" onclick="reset()" value="RESET">
+	  </td>
+	</tr>
 	<tr>
 	  <td>Program Counter</td><td id="PC">0</td>
 	</tr>
 	<tr>
 	  <td>Memory Address</td><td id="memAdd">0</td>
 	</tr>
-      <tr>
-	<td>Memory Data</td><td id="memData">0</td>
-      </tr>
-      <tr>
-	<td>Accumulator</td><td id="Accu">0</td>
-      </tr>
+	<tr>
+	  <td>Memory Data</td><td id="memData">0</td>
+	</tr>
+	<tr>
+	  <td>Accumulator</td><td id="Accu">0</td>
+	</tr>
       </table>
     </p>
   </body>
