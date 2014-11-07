@@ -9,6 +9,12 @@ function setup(){
     frameRate(30);
     live = color(255, 100,20 )
     neutral = color(100,100,100)
+        btnA = createButton('Power')
+    btnB = createButton('Base')
+    btnA.position(0,150)
+    btnB.position(80,150)
+    btnA.mousePressed(switchPower)
+    btnB.mousePressed(switchBase)
 }
 
 function trans(x,y,C,B){
@@ -67,12 +73,7 @@ function draw(){
     scale(1)
     trans(60,60,A,B)
     pop()
-    btnA = createButton('Power')
-    btnB = createButton('Base')
-    btnA.position(0,150)
-    btnB.position(80,150)
-    btnA.mousePressed(switchPower)
-    btnB.mousePressed(switchBase)
+
 }
 
 
