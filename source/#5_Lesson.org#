@@ -197,13 +197,11 @@ z = x + y
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-
 - Use screen shots of the the RAM simulation to describe the process by which data can be stored in RAM.
 - Ensure that you use the following key words: /memory cell/, /word/, /address/, /capacitor/.
 ** Badge It - Platinum
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-
 - Conduct some research and learn how data can be read from the memory cells in RAM.
 - Present your findings in a suitable form.

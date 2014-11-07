@@ -74,30 +74,118 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: save
 :END:
+* More than just data
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- In the [[file:~/bournetocode/projects/8-CS-Computers/pages/5_Lesson.html][last lesson]] you saw how we can write bits of data to RAM.
+- So if we have an address that is 8 bits in length we can write values up to 255 (11111111) to any given address in RAM.
+- In reality, modern computers have far larger address spaces, and 64bit of data (and more) can be written to a single address.
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- The bits that are written to an address are not always considered data though.
+- Sometimes when a CPU is accessing RAM, the bits in an address represent an instruction rather than just a number.
 * The Little Man Computer
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
 ** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
 - Below is a simulation of how a CPU can carry out instructions.
-- You can type commands into the RAM addresses, and the virtual CPU will execute them.
-- Here are a list of the commands that can be accepted.
-  - 1xx =Add value in address xx to the value in the accumulator=
-  - 2xx =Subtract value in address xx from the value in the accumulator=
-  - 3xx =Store the value of the accumulator to address xx=
-  - 5xx =Load the value from address xx to the accumulator=
-  - 6xx =Set the program counter to address xx==
-  - 7xx =If the accumulator contains the value 0 then set the counter to address xx=
-  - 8xx =If the accumulator contains a value greater than 0 then set the counter to address xx=
-  - 901 =Store user input into the accumulator=
-  - 902 =Output the value in the accumulator=
-  - 000 =Halt the program=
+- The table on the left represents RAM. There are 100 RAM address that can be written to (0-99)
+- Each RAM address can hold an instruction or just a number.
+- When the program starts, the Program Counter is set to 0. The CPU then fetches an instruction from address 0
+- After each instruction is executed, the program counter is increased by 1.
+- This means the next address location is read.
+- Sometime an instruction can branch, meaning the program counter jumps to another address.
+- Here are a list of the instructions that can be accepted.
+| Instruction | What it does                                                                            |
+| <c>         | <c>                                                                                     |
+|-------------+-----------------------------------------------------------------------------------------|
+| 1xx         | =Add value in address xx to the value in the accumulator=                               |
+| 2xx         | =Subtract value in address xx from the value in the accumulator=                        |
+| 3xx         | =Store the value of the accumulator to address xx=                                      |
+| 5xx         | =Load the value from address xx to the accumulato=                                      |
+| 6xx         | =Set the program counter to address xx=                                                 |
+| 7xx         | =If the accumulator contains the value 0 then set the counter to address xx=            |
+| 8xx         | =If the accumulator contains a value greater than 0 then set the counter to address xx= |
+| 901         | =Store user input into the accumulator=                                                 |
+| 902         | =Output the value in the accumulator=                                                   |
+| 000         | =Halt the program=                                                                      |
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
 #+BEGIN_HTML
 <object data="js/LMC.html" width='100%' height='600px'></object>
 #+END_HTML
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+
+- Lets write a little program using these instructions and see what happens.
+- Fill in the RAM with the instructions as shown in the table below:
+| Address | Instruction | What it will do                             |
+|---------+-------------+---------------------------------------------|
+| <c>     | <c>         | <c>                                         |
+| 00      | 901         | Take input and load it into the accumulator |
+| 01      | 902         | Output the value from the accumulator       |
+
+-It should look like this
+[[file:img/prog1.png]]
+- Run your program and see what it does.
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+- Let's try something a little more complicated now.
+| Address | Instruction | What it will do                                             |
+|---------+-------------+-------------------------------------------------------------|
+| <c>     | <c>         | <c>                                                         |
+| 00      | 901         | Take input and load it into the accumulator                 |
+| 01      | 350         | Store the input value in address 50                         |
+| 02      | 901         | Take input and load it into the accumulator                 |
+| 03      | 150         | Add the value in address 50 to the value in the accumulator |
+| 04      | 902         | Output the value from the accumulator                       |
+- It should look like this
+[[file:img/prog2.png]]
+- Run this program and see what it does.
+* Assessment
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Badge It - Silver
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+- Can you write a program that will subtract two numbers.
+- So if the first value A is provided, then a second value B is provided, then A-B will be output.
+- Try it with the first value entered of 10 and the second of 6, and make sure that 4 is output.
+* Counting with the LMC
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+- Let's try counting with the LMC down from ten.
+| Address | Instruction | What it will do                                     |
+|---------+-------------+-----------------------------------------------------|
+| <c>     | <c>         | <c>                                                 |
+| 00      | 901         | Take input and load it into the accumulator         |
+| 01      | 350         | Store the input in address 50                       |
+| 02      | 550         | Load the data from address 50                       |
+| 03      | 251         | Subtract the value in address 51                    |
+| 04      | 350         | Stor the value at address 50                        |
+| 05      | 902         | Output value                                        |
+| 06      | 802         | If value is greater than zero, set PC to address 02 |
+| 51      | 1           | Value to be subtracted                              |
 * Assessment
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity

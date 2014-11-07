@@ -336,16 +336,20 @@ blockquote cite:before {
 
 /*TABLES GRRR*/
 table {
-    border: 1px solid @scheme-color;;
+    border: 2px solid @scheme-color;;
     border-collapse: collapse;
     width: 800px;
     text-align:center;
     th{
 	background:@scheme-color-secondary;
-	border: 1px solid @scheme-color;
+	border: 2px solid @scheme-color;
 	color: @scheme-color;
+	height:40px;
+	vertical-align:middle;
     }
     td{
-	border: 1px solid @scheme-color;
+	border: 2px solid @scheme-color;
+	text-align:center;
+	padding:1px;
     }
 }

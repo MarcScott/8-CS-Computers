@@ -83,7 +83,7 @@
 :HTML_CONTAINER_CLASS: learn
 :END:
 - Transistors can come in many shapes and sizes.
-[[http://upload.wikimedia.org/wikipedia/commons/0/0e/Transistors-white.jpg]]
+[[https://upload.wikimedia.org/wikipedia/commons/0/0e/Transistors-white.jpg]]
 - They all have something in common - three pins.
 - The transistors we find in computer chips and memory are much smaller - 22nm to be exact which is 0.000000022m
 [[file:img/22nm.jpg]]

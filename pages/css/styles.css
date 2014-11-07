@@ -300,16 +300,20 @@ blockquote cite:before {
 }
 /*TABLES GRRR*/
 table {
-  border: 1px solid #741371;
+  border: 2px solid #741371;
   border-collapse: collapse;
   width: 800px;
   text-align: center;
 }
 table th {
   background: #e5dce9;
-  border: 1px solid #741371;
+  border: 2px solid #741371;
   color: #741371;
+  height: 40px;
+  vertical-align: middle;
 }
 table td {
-  border: 1px solid #741371;
+  border: 2px solid #741371;
+  text-align: center;
+  padding: 1px;
 }
