@@ -6,6 +6,14 @@ function setup(){
     frameRate(12);
     live = color(255,0,0)
     neutral = color(100,100,100)
+    btnA = createButton(A ? 1:0)
+    btnA.position(25,25)
+    btnB = createButton(B ? 1:0)
+    btnB.position(25,50)
+    btnQ = createButton(Q)
+    btnQ.position(275,40)
+    btnA.mousePressed(switchA)
+    btnB.mousePressed(switchB)
 
 }
 
@@ -96,14 +104,7 @@ function draw(){
     strokeWeight(1)
 
     var Q = y ? 1 : 0;
-    btnA = createButton(A ? 1:0)
-    btnA.position(25,25)
-    btnB = createButton(B ? 1:0)
-    btnB.position(25,50)
-    btnQ = createButton(Q)
-    btnQ.position(275,40)
-    btnA.mousePressed(switchA)
-    btnB.mousePressed(switchB)
+
 }
 
 

@@ -9,6 +9,18 @@ function setup(){
     frameRate(12);
     live = color(255, 100,20 )
     neutral = color(100,100,100)
+    buttonPower = createButton('Power');
+    buttonPower.position(150,80)
+    buttonPower.mousePressed(flipIn)
+    text(In,170,120)
+    buttonA = createButton('A');
+    buttonA.position(200, 80);
+    buttonA.mousePressed(flipA)
+    text(A,210,120)
+    buttonB = createButton('B');
+    buttonB.position(225, 80);
+    buttonB.mousePressed(flipB)
+    text(B,235,120)
 }
 
 function trans(x,y,C,B){
@@ -148,18 +160,7 @@ function draw(){
     NAND()
     pop()
  
-    buttonPower = createButton('Power');
-    buttonPower.position(150,80)
-    buttonPower.mousePressed(flipIn)
-    text(In,170,120)
-    buttonA = createButton('A');
-    buttonA.position(200, 80);
-    buttonA.mousePressed(flipA)
-    text(A,210,120)
-    buttonB = createButton('B');
-    buttonB.position(225, 80);
-    buttonB.mousePressed(flipB)
-    text(B,235,120)
+
 
 }
 
