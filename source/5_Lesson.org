@@ -149,7 +149,7 @@
 - Volatile storage is often called /Primary Storage/ or /Random Access Memory (RAM)/.
 - There are two main types of RAM. /Static RAM (SRAM)/ and /Dynamic RAM (DRAM/
 - SRAM is fast and expensive and is used to hold bits for short periods of time before operations are carried out on them like addition and subtraction. The D-Latch arrangement of NAND gates is a typical memory cell capable of holding a single bit of data inside SRAM. We normally call this type of memory /Cache/.
-- DRAM is slower and cheaper. DRAM is often simply called RAM and is used to store instructions for the computer and for storing bits of data for slightly longer peiods.
+- DRAM is slower and cheaper. DRAM is often simply called RAM and is used to store instructions for the computer and for storing bits of data for slightly longer periods.
 - If you were to run the following script...
 #+BEGIN_SRC python
 x = 4
