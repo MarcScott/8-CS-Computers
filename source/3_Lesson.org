@@ -174,6 +174,6 @@ http://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/XOR_from_NAND.svg/600px
 :END:
 - There is a special arrangement of NAND gates called a D-Latch.
 - Use the Web to find out what the arrangement of NAND gates in a D-Latch is.
-- Write a description of a D-Latch and explaine why it is useful in computing.
+- Write a description of a D-Latch and explain why it is useful in computing.
 
 
