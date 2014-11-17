@@ -1,5 +1,6 @@
 var A = false;
 var B = false;
+var Q = true;
 
 function setup(){
     createCanvas(300, 100);  
@@ -10,11 +11,10 @@ function setup(){
     btnA.position(25,25)
     btnB = createButton(B ? 1:0)
     btnB.position(25,50)
-    btnQ = createButton(Q)
+    btnQ = createButton(Q ? 1:0)
     btnQ.position(275,40)
     btnA.mousePressed(switchA)
     btnB.mousePressed(switchB)
-
 }
 
 //wire class (xy start, XY end, On is true or false)
@@ -102,9 +102,7 @@ function draw(){
     y = new NAND(450,100,x,x).display()
     stroke(100,100,100)
     strokeWeight(1)
-
-    var Q = y ? 1 : 0;
-
+//    Q = y ? 1 : 0;
 }
 
 
