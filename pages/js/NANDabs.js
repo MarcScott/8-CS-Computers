@@ -1,11 +1,20 @@
 var A = false;
 var B = false;
+var Q = true;
 
 function setup(){
     createCanvas(200, 100);  
     frameRate(12);
     live = color(255,0,0)
     neutral = color(100,100,100)
+    btnA = createButton('A')
+    btnA.position(25,25)
+    btnB = createButton('B')
+    btnB.position(25,50)
+    btnQ = createButton('Q')
+    btnQ.position(150,40)
+    btnA.mousePressed(switchA)
+    btnB.mousePressed(switchB)
 
 }
 
@@ -89,15 +98,10 @@ function switchB(){
 function draw(){
     strokeWeight(3)
     x = new NAND(200,100,A,B).display()
-    var Q = x ? 1 : 0;
-    btnA = createButton(A ? 1:0)
-    btnA.position(25,25)
-    btnB = createButton(B ? 1:0)
-    btnB.position(25,50)
-    btnQ = createButton(Q)
-    btnQ.position(150,40)
-    btnA.mousePressed(switchA)
-    btnB.mousePressed(switchB)
+    
+    var Q = x;
+    
+
 }
 
 

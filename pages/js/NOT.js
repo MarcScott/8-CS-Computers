@@ -1,10 +1,16 @@
 var A = false;
+var Q = true;
 
 function setup(){
     createCanvas(200,100);  
     frameRate(12);
     live = color(255,0,0)
     neutral = color(100,100,100)
+    btnA = createButton('A')
+    btnA.position(25,39)
+    btnQ = createButton('Q')
+    btnQ.position(150,39)
+    btnA.mousePressed(switchA)
 }
 
 function NOT(x,y,A){
@@ -45,10 +51,6 @@ function draw(){
     //draw a NAND
     Q = new NOT(200,100,A).display()
     //and add some buttons
-    btnA = createButton(A ? 1:0)
-    btnA.position(25,39)
-    btnQ = createButton(Q ? 1:0)
-    btnQ.position(150,39)
-    btnA.mousePressed(switchA)
+
 
 }

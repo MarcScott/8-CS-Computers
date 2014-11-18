@@ -1,0 +1,177 @@
+#+STARTUP:indent
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+#+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+#+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil  
+#+TITLE: How A Computer Works
+#+AUTHOR: Marc Scott
+
+#+BEGIN_HTML
+<div class=ribbon>
+<a href="https://github.com/MarcScott/8-CS-Computers">Fork me on GitHub</a>
+</div>
+#+END_HTML
+
+* COMMENT Use as a template
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+
+** Research It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: research
+:END:
+
+** Design It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: design
+:END:
+
+** Build It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: build
+:END:
+
+** Test It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: test
+:END:
+
+** Run It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: run
+:END:
+
+** Document It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: document
+:END:
+
+** Code It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+
+** Program It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: program
+:END:
+
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+
+** Badge It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+
+** Save It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: save
+:END:
+* Simplifying NAND gates
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Learn It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+- NAND gates are really useful, but it would be annoying to have to draw the transistors every time.
+- Instead we use a symbol like the one shown below. You can click the buttons and compare it to the transistor version below it, to see that they are identical in function.
+#+BEGIN_HTML
+<object data="js/NAND.html" width='200px' height='200px'></object>
+#+END_HTML
+------
+#+BEGIN_HTML
+<object data="js/TranNAND.html" width='300px' height='320px'></object>
+#+END_HTML
+* Combining NAND gates
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+- NAND gates are said to be /universal logical gates/ because you can make all other types of logic gate out of them.
+- We can take a single NAND gate like this one.
+#+BEGIN_HTML
+<object data="js/NANDabs.html" width='200px' height='100px'></object>
+#+END_HTML
+- And use it to make this
+#+BEGIN_HTML
+<object data="js/ANDfromNANDS.html" width='300px' height='100px'></object>
+#+END_HTML
+- This is called an AND gate
+* Assessment
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Badge It - Silver
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+- Have a look at the below. This is the arrangement for a NOT gate, sometimes called an inverter.
+- Construct a Truth table for the arrangement, showing input A output Q.
+http://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/NOT_from_NAND.svg/240px-NOT_from_NAND.svg.png
+| A | Q |
+|---+---|
+| 1 |   |
+| 0 |   |
+
+* Making other gates from NAND gates.
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+- We've already seen one other gate that can be made using NAND gates - it was called an AND gate.
+- Below is the diagram for the NAND gate arrangements for an AND gate again, and a simplified symbol for an AND gate that is commonly used.
+#+BEGIN_HTML
+<object data="js/ANDfromNANDS.html" width='300px' height='100px'></object>
+#+END_HTML
+#+BEGIN_HTML
+<object data="js/AND.html" width='200px' height='100px'></object>
+#+END_HTML
+- Hopefully you can see that the two are identical. When inputs A and B are on, output Q is on. When either or both A and B are off, Q is off.
+- The AND gate has a very similar symbol to the NAND gate (it's just missing the little circle near the output) so make sure you don't get the two confused.
+- The truth table for an AND gate looks like this
+| A | B | Q |
+|---+---+---|
+| 0 | 0 | 0 |
+| 1 | 0 | 0 |
+| 0 | 1 | 0 |
+| 1 | 1 | 1 |
+* Assessment
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Badge It - Gold
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+- Look at the diagrams below, showing other NAND gate arrangements. These are called OR, NOR and XOR gates.
+- For each one, draw a Truth Table showing inputs and outputs.
+-----
+- OR gate
+[[http://upload.wikimedia.org/wikipedia/commons/thumb/9/90/OR_from_NAND.svg/400px-OR_from_NAND.svg.png]]
+-----
+- NOR gate
+[[http://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/NOR_from_NAND.svg/560px-NOR_from_NAND.svg.png]]
+-----
+- XOR gate
+http://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/XOR_from_NAND.svg/600px-XOR_from_NAND.svg.png
+
+* Assessment
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Badge It - Platinum
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+- There is a special arrangement of NAND gates called a D-Latch.
+- Use the Web to find out what the arrangement of NAND gates in a D-Latch is.
+- Write a description of a D-Latch and explain why it is useful in computing.
+
+

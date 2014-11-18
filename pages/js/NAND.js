@@ -1,5 +1,8 @@
 var A = 0;
 var B = 0;
+var Q = 1;
+
+var buttonA,buttonB,buttonQ;
 
 
 function setup(){
@@ -7,6 +10,22 @@ function setup(){
     frameRate(12);
     live = color(255,0,0)
     neutral = color(100,100,100)
+    buttonA=createButton('A')
+    buttonA.position(50,160)
+    buttonA.mousePressed(switchA)
+    text(A,60,200)
+    buttonB=createButton('B')
+    buttonB.position(80,160)
+    buttonB.mousePressed(switchB)
+    text(B,90,200)
+    buttonQ=createButton('Q')
+    buttonQ.position(110,160)
+    text(Q,120,200)
+}
+
+function draw(){
+    background(255)
+    var Q = NAND(100,100,A,B)
 }
 
 function NAND(x,y,A,B){
@@ -63,23 +82,7 @@ function switchB(){
     B = 1-B
 }
 
-function draw(){
-    background(255)
-    var Q = NAND(100,100,A,B)
-    buttonA=createButton('A')
-    buttonA.position(50,160)
-    buttonA.mousePressed(switchA)
-    text(A,60,200)
-    buttonB=createButton('B')
-    buttonB.position(80,160)
-    buttonB.mousePressed(switchB)
-    text(B,90,200)
-    buttonQ=createButton('Q')
-    buttonQ.position(110,160)
-    text(Q,120,200)
-    
 
-}
 
 
 

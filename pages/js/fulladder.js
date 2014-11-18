@@ -10,6 +10,19 @@ function setup(){
     neutral = color(100,100,100);
     XORimg = loadImage("XOR.jpg");
     ORimg = loadImage("OR.png");
+    btnA = createButton('A')
+    btnA.position(25,27)
+    btnB = createButton('B')
+    btnB.position(25,52)
+    btnC = createButton('C')
+    btnC.position(25,77)
+    btnQ = createButton("Q")
+    btnQ.position(400,65)
+    btnCarry = createButton('Carry')
+    btnCarry.position(400,177)
+    btnA.mousePressed(switchA)
+    btnB.mousePressed(switchB)
+    btnC.mousePressed(switchC)
 }
 
 function AND(x,y,A,B){
@@ -252,25 +265,13 @@ function draw(){
     ellipse(80,62.5,5,5)
     ellipse(60,87.5,5,5)
     //and add some buttons
-    btnA = createButton(A ? 1:0)
-    btnA.position(25,27)
-    btnB = createButton(B ? 1:0)
-    btnB.position(25,52)
-    btnC = createButton(C ? 1:0)
-    btnC.position(25,77)
-    btnQ = createButton(XOR3 ? 1:0)
-    btnQ.position(400,65)
-    btnCarry = createButton(OR1 ? 1:0)
-    btnCarry.position(400,177)
-    btnA.mousePressed(switchA)
-    btnB.mousePressed(switchB)
-    btnC.mousePressed(switchC)
+
     strokeWeight(1)
     fill(neutral)
-    textSize(20)
-    text('A',10,27+18)
-    text('B',10,52+18)
-    text('C',10,77+18)
-    text('Result',430,65+18)
-    text('Carry',430,177+18)
+    textSize(12)
+    text(A ? 1:0,10,27+12)
+    text(B ? 1:0,10,52+18)
+    text(C ? 1:0,10,77+18)
+    text(XOR3 ? 1:0,430,65+12)
+    text(OR1 ? 1:0,450,177+12)
 }

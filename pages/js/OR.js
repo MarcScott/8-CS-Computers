@@ -1,12 +1,21 @@
 var A = false;
 var B = false;
-
+var Q = false;
+    
 function setup(){
     createCanvas(200,100);  
     frameRate(12);
     live = color(255,0,0)
     neutral = color(100,100,100)
     img = loadImage("OR.png");
+    btnA = createButton('A')
+    btnA.position(25,27)
+    btnB = createButton('B')
+    btnB.position(25,52)
+    btnQ = createButton('Q')
+    btnQ.position(150,39)
+    btnA.mousePressed(switchA)
+    btnB.mousePressed(switchB)
 }
 
 function OR(x,y,A,B){
@@ -53,13 +62,6 @@ function draw(){
     //draw a NAND
     Q = new OR(200,100,A,B).display()
     //and add some buttons
-    btnA = createButton(A ? 1:0)
-    btnA.position(25,27)
-    btnB = createButton(B ? 1:0)
-    btnB.position(25,52)
-    btnQ = createButton(Q ? 1:0)
-    btnQ.position(150,39)
-    btnA.mousePressed(switchA)
-    btnB.mousePressed(switchB)
+
 
 }

@@ -1,5 +1,6 @@
 var A = true;
 var B = false;
+var 
 
 function setup(){
     createCanvas(200,200);  
@@ -7,6 +8,16 @@ function setup(){
     live = color(255,0,0);
     neutral = color(100,100,100);
     XORimg = loadImage("XOR.jpg");
+    btnA = createButton('A')
+    btnA.position(25,27)
+    btnB = createButton('B')
+    btnB.position(25,52)
+    btnQ = createButton('Q')
+    btnQ.position(200,39)
+    btnCarry = createButton("Q'")
+    btnCarry.position(200,112.5)
+    btnA.mousePressed(switchA)
+    btnB.mousePressed(switchB)
 }
 
 function AND(x,y,A,B){
@@ -228,14 +239,5 @@ function draw(){
     ellipse(100,37.5,5,5)
     ellipse(80,62.5,5,5)
     //and add some buttons
-    btnA = createButton(A ? 1:0)
-    btnA.position(25,27)
-    btnB = createButton(B ? 1:0)
-    btnB.position(25,52)
-    btnQ = createButton(XOR1 ? 1:0)
-    btnQ.position(200,39)
-    btnCarry = createButton(AND1 ? 1:0)
-    btnCarry.position(200,112.5)
-    btnA.mousePressed(switchA)
-    btnB.mousePressed(switchB)
+
 }
