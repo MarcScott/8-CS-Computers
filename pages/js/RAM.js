@@ -112,7 +112,7 @@ function powerUp(){
 //wipe the bits when wipe button pushed
 function wipe(){
     for(var i = 0;i<Cells.length;i++){
-	for(var j = 0;j<Cells[i].length;i++){
+	for(var j = 0;j<Cells[i].length;j++){
 	    Cells[i][j].state = false;
 	}
     }
