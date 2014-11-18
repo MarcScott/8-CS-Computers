@@ -1,6 +1,6 @@
 var A = true;
 var B = false;
-var 
+var Q = false;
 
 function setup(){
     createCanvas(200,200);  
