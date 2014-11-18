@@ -119,8 +119,6 @@ http://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/NOT_from_NAND.svg/240px
 | A | Q |
 |---+---|
 | 0 |   |
-| 0 |   |
-| 1 |   |
 | 1 |   |
 
 * Making other gates from NAND gates.
