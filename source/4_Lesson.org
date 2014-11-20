@@ -165,7 +165,7 @@
   11+
  ---
 #+END_EXAMPLE
-- Starting from the left, we need to add the two ones together. So on the circuit, click the inputs A and B so that they are both 1s.
+- Starting from the right, we need to add the two ones together. So on the circuit, click the inputs A and B so that they are both 1s.
 - We see the result is =0= with a Carry of =1=
 - Let's write that down.
 #+BEGIN_EXAMPLE
@@ -210,7 +210,7 @@
  ---
 111
 #+END_EXAMPLE
-- And there we have a result =1011=
+- And there we have a result =1010=
 
 * Assessment
 :PROPERTIES:
