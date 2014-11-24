@@ -78,7 +78,6 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
-
 ** Learn It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
@@ -125,7 +124,7 @@
 :HTML_CONTAINER_CLASS: learn
 :END:
 #+BEGIN_HTML
-<object data="js/LMC.html" width='100%' height='600px'></object>
+<object data="http://www.peterhigginson.co.uk/LMC" width='100%' height='600px'></object>
 #+END_HTML
 ** Try It
 :PROPERTIES:
