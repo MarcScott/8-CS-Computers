@@ -100,12 +100,18 @@
 :HTML_CONTAINER_CLASS: learn
 :END:
 - Below is a simulation of how a CPU can carry out instructions.
-- The table on the left represents RAM. There are 100 RAM address that can be written to (0-99)
-- Each RAM address can hold an instruction or just a number.
+- For now, ignore the section on the left titled /Assembley Language Code/.
+- The section titled /RAM/ is where we'll focus.
 - When the program starts, the Program Counter is set to 0. The CPU then fetches an instruction from address 0
 - After each instruction is executed, the program counter is increased by 1.
 - This means the next address location is read.
 - Sometime an instruction can branch, meaning the program counter jumps to another address.
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: learn
+:END:
+#+BEGIN_HTML
+<object data="http://www.peterhigginson.co.uk/LMC" width='1000' height='600px'></object>
+#+END_HTML
 - Here are a list of the instructions that can be accepted.
 | Instruction | What it does                                                                            |
 | <c>         | <c>                                                                                     |
@@ -120,17 +126,10 @@
 | 901         | =Store user input into the accumulator=                                                 |
 | 902         | =Output the value in the accumulator=                                                   |
 | 000         | =Halt the program=                                                                      |
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: learn
-:END:
-#+BEGIN_HTML
-<object data="http://www.peterhigginson.co.uk/LMC" width='100%' height='600px'></object>
-#+END_HTML
 ** Try It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: try
 :END:
-
 - Lets write a little program using these instructions and see what happens.
 - Fill in the RAM with the instructions as shown in the table below:
 | Address | Instruction | What it will do                             |
@@ -138,15 +137,34 @@
 | <c>     | <c>         | <c>                                         |
 | 00      | 901         | Take input and load it into the accumulator |
 | 01      | 902         | Output the value from the accumulator       |
-
 -It should look like this
-[[file:img/prog1.png]]
-- Run your program and see what it does.
+- You /must/ hit =ENTER= after inputing each code into the RAM address.
+[[file:img/LMC1.png]]
+- Run your program by hitting the =RUN= button and see what it does.
+- Watch the little Android. She'll tell you what is happening.
+- If you want to run it again, you'll need to hit the =RESET= 
+* Assessment
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
+** Badge It - Silver
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+- Write down what happends when you run the simple program. You can use the list below as a start.
+  1. The value in the =PROGRAM COUNTER= is sent to =ARITHMETIC UNIT= and to that address in RAM.
+  2. The value in the =ARITHMETIC UNIT= is increased by 1 and sent back to the =PROGRAM COUNTER=
+  3. The value at address 0 in RAM is sent to the the =INSTRUCTION REGISTER= and the =ADDRESS REGISTER=
+* Some Basic Maths.
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
 ** Try It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: try
 :END:
 - Let's try something a little more complicated now.
+- Add these values into the RAM addresses and hit =RUN=
 | Address | Instruction | What it will do                                             |
 |---------+-------------+-------------------------------------------------------------|
 | <c>     | <c>         | <c>                                                         |
@@ -156,13 +174,13 @@
 | 03      | 150         | Add the value in address 50 to the value in the accumulator |
 | 04      | 902         | Output the value from the accumulator                       |
 - It should look like this
-[[file:img/prog2.png]]
-- Run this program and see what it does.
+[[file:img/LMC2.png]]
+- Can you explain what is happening?
 * Assessment
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
-** Badge It - Silver
+** Badge It - Gold
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
@@ -181,7 +199,7 @@
 | 01      | 350         | Store the input in address 50                       |
 | 02      | 550         | Load the data from address 50                       |
 | 03      | 251         | Subtract the value in address 51                    |
-| 04      | 350         | Stor the value at address 50                        |
+| 04      | 350         | Store the value at address 50                       |
 | 05      | 902         | Output value                                        |
 | 06      | 802         | If value is greater than zero, set PC to address 02 |
 | 51      | 1           | Value to be subtracted                              |
@@ -189,13 +207,17 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
-** Badge It - Gold
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: badge
-:END:
-
 ** Badge It - Platinum
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
-:END:
-
+:END: 
+- [[http:en.wikipedia.org/Fibonacci_number][The Fibonacci Sequence]] can be produced by starting with two number 1s
+=1,1=
+- You then add these numbers to get the next value in the sequence.
+=1,1,2=
+- You can now add 1 + 2 to get the next.
+=1,1,2,3=
+- And keep going.
+=1,1,2,3,5,8,13...=
+- Can you write an LMC program that outputs the Fibonacci Squence.
+- (/HINT/ the code 6 will reset the =PROGRAM COUNTER= to what ever address you like. For instance 600 will reset it to address 000)

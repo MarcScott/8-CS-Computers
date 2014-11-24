@@ -63,12 +63,16 @@ p code {
   hyphens: none;
   white-space: pre-wrap;
   /* css-3 */
+
   white-space: -moz-pre-wrap !important;
   /* Mozilla, since 1999 */
+
   white-space: -pre-wrap;
   /* Opera 4-6 */
+
   white-space: -o-pre-wrap;
   /* Opera 7 */
+
 }
 pre {
   font-size: 16px;
@@ -96,6 +100,7 @@ pre {
   -moz-border-radius-bottomleft: 5px;
   text-align: right;
   /* ensure doesn't flow off the screen when expanded */
+
   max-height: 80%;
   overflow: auto;
 }
@@ -161,7 +166,7 @@ object {
   margin-left: auto;
   margin-right: auto;
   display: block;
-  max-width: 600px;
+  max-width: 1000px;
 }
 .activity iframe {
   padding: 5px;
@@ -241,6 +246,7 @@ ul li:before {
   list-style-type: none;
   list-style-type: decimal !ie;
   /*IE 7- hack*/
+
   counter-reset: li-counter;
 }
 .org-ol > li {

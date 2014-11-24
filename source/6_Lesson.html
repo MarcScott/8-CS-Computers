@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>How A Computer Works</title>
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">How A Computer Works</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. More than just data</a>
+<ul>
+<li><a href="#sec-1-1">Learn It</a></li>
+<li><a href="#sec-1-2">Learn It</a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2. The Little Man Computer</a>
+<ul>
+<li><a href="#sec-2-1">Learn It</a></li>
+<li><a href="#sec-2-2">Try It</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3. Assessment</a>
+<ul>
+<li><a href="#sec-3-1">Badge It - Silver</a></li>
+</ul>
+</li>
+<li><a href="#sec-4">4. Some Basic Maths.</a>
+<ul>
+<li><a href="#sec-4-1">Try It</a></li>
+</ul>
+</li>
+<li><a href="#sec-5">5. Assessment</a>
+<ul>
+<li><a href="#sec-5-1">Badge It - Gold</a></li>
+</ul>
+</li>
+<li><a href="#sec-6">6. Counting with the LMC</a></li>
+<li><a href="#sec-7">7. Assessment</a>
+<ul>
+<li><a href="#sec-7-1">Badge It - Platinum</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class=ribbon>
+<a href="https://github.com/MarcScott/8-CS-Computers">Fork me on GitHub</a>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2 activity">
+<h2 id="sec-1"><span class="section-number-2">1</span> More than just data</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-sec-1-1" class="outline-3 learn">
+<h3 id="sec-1-1">Learn It</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>In the <a href="file:///home/coding2learn/bournetocode/projects/8-CS-Computers/pages/5_Lesson.html">last lesson</a> you saw how we can write bits of data to RAM.
+</li>
+<li>So if we have an address that is 8 bits in length we can write values up to 255 (11111111) to any given address in RAM.
+</li>
+<li>In reality, modern computers have far larger address spaces, and 64bit of data (and more) can be written to a single address.
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1-2" class="outline-3 learn">
+<h3 id="sec-1-2">Learn It</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li>The bits that are written to an address are not always considered data though.
+</li>
+<li>Sometimes when a CPU is accessing RAM, the bits in an address represent an instruction rather than just a number.
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2" class="outline-2 activity">
+<h2 id="sec-2"><span class="section-number-2">2</span> The Little Man Computer</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-sec-2-1" class="outline-3 learn">
+<h3 id="sec-2-1">Learn It</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>Below is a simulation of how a CPU can carry out instructions.
+</li>
+<li>For now, ignore the section on the left titled <i>Assembley Language Code</i>.
+</li>
+<li>The section titled <i>RAM</i> is where we'll focus.
+</li>
+<li>When the program starts, the Program Counter is set to 0. The CPU then fetches an instruction from address 0
+</li>
+<li>After each instruction is executed, the program counter is increased by 1.
+</li>
+<li>This means the next address location is read.
+</li>
+<li>Sometime an instruction can branch, meaning the program counter jumps to another address.
+</li>
+</ul>
+<object data="http://www.peterhigginson.co.uk/LMC" width='1000' height='600px'></object>
+<ul class="org-ul">
+<li>Here are a list of the instructions that can be accepted.
+</li>
+</ul>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="center" />
+
+<col  class="center" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="center">Instruction</th>
+<th scope="col" class="center">What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">1xx</td>
+<td class="center"><code>Add value in address xx to the value in the accumulator</code></td>
+</tr>
+
+<tr>
+<td class="center">2xx</td>
+<td class="center"><code>Subtract value in address xx from the value in the accumulator</code></td>
+</tr>
+
+<tr>
+<td class="center">3xx</td>
+<td class="center"><code>Store the value of the accumulator to address xx</code></td>
+</tr>
+
+<tr>
+<td class="center">5xx</td>
+<td class="center"><code>Load the value from address xx to the accumulato</code></td>
+</tr>
+
+<tr>
+<td class="center">6xx</td>
+<td class="center"><code>Set the program counter to address xx</code></td>
+</tr>
+
+<tr>
+<td class="center">7xx</td>
+<td class="center"><code>If the accumulator contains the value 0 then set the counter to address xx</code></td>
+</tr>
+
+<tr>
+<td class="center">8xx</td>
+<td class="center"><code>If the accumulator contains a value greater than 0 then set the counter to address xx</code></td>
+</tr>
+
+<tr>
+<td class="center">901</td>
+<td class="center"><code>Store user input into the accumulator</code></td>
+</tr>
+
+<tr>
+<td class="center">902</td>
+<td class="center"><code>Output the value in the accumulator</code></td>
+</tr>
+
+<tr>
+<td class="center">000</td>
+<td class="center"><code>Halt the program</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-sec-2-2" class="outline-3 try">
+<h3 id="sec-2-2">Try It</h3>
+<div class="outline-text-3" id="text-2-2">
+<ul class="org-ul">
+<li>Lets write a little program using these instructions and see what happens.
+</li>
+<li>Fill in the RAM with the instructions as shown in the table below:
+</li>
+</ul>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="center" />
+
+<col  class="center" />
+
+<col  class="center" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="center">Address</th>
+<th scope="col" class="center">Instruction</th>
+<th scope="col" class="center">What it will do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">00</td>
+<td class="center">901</td>
+<td class="center">Take input and load it into the accumulator</td>
+</tr>
+
+<tr>
+<td class="center">01</td>
+<td class="center">902</td>
+<td class="center">Output the value from the accumulator</td>
+</tr>
+</tbody>
+</table>
+<p>
+-It should look like this
+</p>
+<ul class="org-ul">
+<li>You <i>must</i> hit <code>ENTER</code> after inputing each code into the RAM address.
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="img/LMC1.png" alt="LMC1.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>Run your program by hitting the <code>RUN</code> button and see what it does.
+</li>
+<li>Watch the little Android. She'll tell you what is happening.
+</li>
+<li>If you want to run it again, you'll need to hit the <code>RESET</code> 
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-3" class="outline-2 activity">
+<h2 id="sec-3"><span class="section-number-2">3</span> Assessment</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-sec-3-1" class="outline-3 badge">
+<h3 id="sec-3-1">Badge It - Silver</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li>Write down what happends when you run the simple program. You can use the list below as a start.
+<ol class="org-ol">
+<li>The value in the <code>PROGRAM COUNTER</code> is sent to <code>ARITHMETIC UNIT</code> and to that address in RAM.
+</li>
+<li>The value in the <code>ARITHMETIC UNIT</code> is increased by 1 and sent back to the <code>PROGRAM COUNTER</code>
+</li>
+<li>The value at address 0 in RAM is sent to the the <code>INSTRUCTION REGISTER</code> and the <code>ADDRESS REGISTER</code>
+</li>
+</ol>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-4" class="outline-2 activity">
+<h2 id="sec-4"><span class="section-number-2">4</span> Some Basic Maths.</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-sec-4-1" class="outline-3 try">
+<h3 id="sec-4-1">Try It</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li>Let's try something a little more complicated now.
+</li>
+<li>Add these values into the RAM addresses and hit <code>RUN</code>
+</li>
+</ul>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="center" />
+
+<col  class="center" />
+
+<col  class="center" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="center">Address</th>
+<th scope="col" class="center">Instruction</th>
+<th scope="col" class="center">What it will do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">00</td>
+<td class="center">901</td>
+<td class="center">Take input and load it into the accumulator</td>
+</tr>
+
+<tr>
+<td class="center">01</td>
+<td class="center">350</td>
+<td class="center">Store the input value in address 50</td>
+</tr>
+
+<tr>
+<td class="center">02</td>
+<td class="center">901</td>
+<td class="center">Take input and load it into the accumulator</td>
+</tr>
+
+<tr>
+<td class="center">03</td>
+<td class="center">150</td>
+<td class="center">Add the value in address 50 to the value in the accumulator</td>
+</tr>
+
+<tr>
+<td class="center">04</td>
+<td class="center">902</td>
+<td class="center">Output the value from the accumulator</td>
+</tr>
+</tbody>
+</table>
+<ul class="org-ul">
+<li>It should look like this
+</li>
+</ul>
+
+<div class="figure">
+<p><img src="img/LMC2.png" alt="LMC2.png" />
+</p>
+</div>
+<ul class="org-ul">
+<li>Can you explain what is happening?
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-5" class="outline-2 activity">
+<h2 id="sec-5"><span class="section-number-2">5</span> Assessment</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-sec-5-1" class="outline-3 badge">
+<h3 id="sec-5-1">Badge It - Gold</h3>
+<div class="outline-text-3" id="text-5-1">
+<ul class="org-ul">
+<li>Can you write a program that will subtract two numbers.
+</li>
+<li>So if the first value A is provided, then a second value B is provided, then A-B will be output.
+</li>
+<li>Try it with the first value entered of 10 and the second of 6, and make sure that 4 is output.
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-6" class="outline-2 activity">
+<h2 id="sec-6"><span class="section-number-2">6</span> Counting with the LMC</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>Let's try counting with the LMC down from ten.
+</li>
+</ul>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="center" />
+
+<col  class="center" />
+
+<col  class="center" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="center">Address</th>
+<th scope="col" class="center">Instruction</th>
+<th scope="col" class="center">What it will do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="center">00</td>
+<td class="center">901</td>
+<td class="center">Take input and load it into the accumulator</td>
+</tr>
+
+<tr>
+<td class="center">01</td>
+<td class="center">350</td>
+<td class="center">Store the input in address 50</td>
+</tr>
+
+<tr>
+<td class="center">02</td>
+<td class="center">550</td>
+<td class="center">Load the data from address 50</td>
+</tr>
+
+<tr>
+<td class="center">03</td>
+<td class="center">251</td>
+<td class="center">Subtract the value in address 51</td>
+</tr>
+
+<tr>
+<td class="center">04</td>
+<td class="center">350</td>
+<td class="center">Store the value at address 50</td>
+</tr>
+
+<tr>
+<td class="center">05</td>
+<td class="center">902</td>
+<td class="center">Output value</td>
+</tr>
+
+<tr>
+<td class="center">06</td>
+<td class="center">802</td>
+<td class="center">If value is greater than zero, set PC to address 02</td>
+</tr>
+
+<tr>
+<td class="center">51</td>
+<td class="center">1</td>
+<td class="center">Value to be subtracted</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-sec-7" class="outline-2 activity">
+<h2 id="sec-7"><span class="section-number-2">7</span> Assessment</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-sec-7-1" class="outline-3 badge">
+<h3 id="sec-7-1">Badge It - Platinum</h3>
+<div class="outline-text-3" id="text-7-1">
+<ul class="org-ul">
+<li><a href="http:en.wikipedia.org/Fibonacci_number">The Fibonacci Sequence</a> can be produced by starting with two number 1s
+</li>
+</ul>
+<p>
+<code>1,1</code>
+</p>
+<ul class="org-ul">
+<li>You then add these numbers to get the next value in the sequence.
+</li>
+</ul>
+<p>
+<code>1,1,2</code>
+</p>
+<ul class="org-ul">
+<li>You can now add 1 + 2 to get the next.
+</li>
+</ul>
+<p>
+<code>1,1,2,3</code>
+</p>
+<ul class="org-ul">
+<li>And keep going.
+</li>
+</ul>
+<p>
+<code>1,1,2,3,5,8,13...</code>
+</p>
+<ul class="org-ul">
+<li>Can you write an LMC program that outputs the Fibonacci Squence.
+</li>
+<li>(<i>HINT</i> the code 6 will reset the <code>PROGRAM COUNTER</code> to what ever address you like. For instance 600 will reset it to address 000)
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
