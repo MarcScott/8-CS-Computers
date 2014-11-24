@@ -33,7 +33,7 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: link-heading
 :END:
-* Week 6 - Fetch and Execute
+* [[file:pages/6_Lesson.html][Week 6 - Fetch and Execute]]
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: link-heading
 :END:
