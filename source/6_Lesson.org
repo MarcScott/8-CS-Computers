@@ -110,7 +110,7 @@
 :HTML_CONTAINER_CLASS: learn
 :END:
 #+BEGIN_HTML
-<object data="http://www.peterhigginson.co.uk/LMC" width='1000' height='600px'></object>
+<object data="js/LMC/index.html" width='1000' height='600px'></object>
 #+END_HTML
 - Here are a list of the instructions that can be accepted.
 | Instruction | What it does                                                                                        |
