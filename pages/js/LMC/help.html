@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Little Man Computer - CPU simulator - help page</title>
+</head>
+<body>
+<p>
+<strong>Quick start - if you don't want to read all this:</strong>
+</p><p>
+<ul><li><strong>SELECT</strong> a program from the drop down list.</li>
+<li>Click <strong>RUN</strong> to start execution.</li>
+</ul>
+Execution starts at a medium speed and you can use the >> button to speed it up. <strong>Enjoy.</strong>
+</p>
+<h1><center>Little Man Computer - CPU simulator - help page</center></h1>
+<p>
+The Little Man Computer (LMC) is an instructional model of a computer, created by Dr. Stuart Madnick in 1965.
+It models the architecture of a simple computer and has all the basic features. 
+See <a href="http://en.wikipedia.org/wiki/Little_man_computer" target="_blank" >en.wikipedia.org/wiki/Little_man_computer</a> for more information.
+</p><p>
+The original concept was that inside the CPU is a tiny man who runs around executing instructions encoded in a list. Inside the CPU there are:
+<ul><li>100 Memory locations (numbered 0 to 99).</li>
+<li>An Arithmetic Unit to do calculations.</li>
+<li>An Accumulator to store the result of the last operation or calculation.</li>
+<li>A Program Counter to store the address (in memory) of the next instruction to do.</li>
+<li>An Instruction Register to hold the top digit of the instruction read from memory.</li>
+<li>An Address Register to hold the bottom two digits of the instruction read from memory.</li>
+<li>An Input tray into which a number can be typed when needed.</li>
+<li>An Output area where any numbers output are printed.</li>
+</ul>
+</p><p>
+The Program Counter holds only 2 digits (0 to 99) and the Accumulator holds 3 digits and a sign (-999 to 999). The Output area holds a certain amount of information in two columns and then scrolls (and old information disappears).
+</p><p>
+When an instruction is read from memory the top digit is used to decide what to do. To help us write programs more easily each instruction type is given a name which the ASSEMBLE function converts to the corresponding code. The bottom two digits are used as an address associated with the instruction. The instructions are:
+</p><p>
+<table style="width: 100%; border-collapse: collapse;" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr valign="top">
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="5%" ><strong>Code</strong></td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="10%" ><strong>Name</strong></td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="65%" ><strong>Description</strong></td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+</tr>
+<tr valign="top">
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="5%" >&nbsp;0</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="10%" >HLT</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="65%" >Stop (Little Man has a rest).</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+</tr>
+<tr valign="top">
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="5%" >&nbsp;1</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="10%" >ADD</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="65%" >Add the contents of the memory address to the Accumulator</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+</tr>
+<tr valign="top">
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="5%" >&nbsp;2</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="10%" >SUB</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="65%" >Subtract the contents of the memory address from the Accumulator</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+</tr>
+<tr valign="top">
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="5%" >&nbsp;3</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="10%" >STA or STO</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="65%" >Store the value in the Accumulator in the memory address given.</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+</tr>
+<tr valign="top">
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="5%" >&nbsp;4</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="10%" >&nbsp;</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="65%" >This code is unused and gives an error.</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+</tr>
+<tr valign="top">
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="5%" >&nbsp;5</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="10%" >LDA</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="65%" >Load the Accumulator with the contents of the memory address given</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+</tr>
+<tr valign="top">
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="5%" >&nbsp;6</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="10%" >BRA</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="65%" >Branch - use the address given as the address of the next instruction</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+</tr>
+<tr valign="top">
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="5%" >&nbsp;7</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="10%" >BRZ</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="65%" >Branch to the address given if the Accumulator is zero</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+</tr>
+<tr valign="top">
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="5%" >&nbsp;8</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="10%" >BRP</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="65%" >Branch to the address given if the Accumulator is zero or positive</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+</tr>
+<tr valign="top">
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="5%" >&nbsp;9</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="10%" >INP or OUT</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="65%" >Input or Output. Take from Input if address is 1, copy to Output if address is 2.</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+</tr>
+<tr valign="top">
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="5%" >&nbsp;9</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="10%" >OTC</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="65%" >Output accumulator as a character if address is 22. (Non-standard instruction)</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+</tr>
+<tr valign="top">
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="10%" >DAT</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+<td style="padding: 0;" width="65%" >Used to indicate a location that contains data.</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+</tr>
+</tbody></table>
+</p><p>
+Note that the LMC computer cannot tell whether memory locations contain instructions or data. Most modern computers can segment their memory but there has to be a way for the output from one program the become the instructions of another. DAT is a fake instruction to tell the assembler that this location contains data.
+</p><p>
+This implementation allows you to output both numbers (OUT) and characters (OTC). On a real computer you would only have the OTC instruction and the program would have to convert numbers to characters before printing. (Standard routines are provided.) The same is true for input but we have provided INP to input numbers for simplicity.
+</p><p>
+The assembler also allows us to give names (called labels) to addresses. Any word that is not a recognised instruction is assumed to be a label. If the label is before the instruction (or DAT) then it defines the label as representing that address; if it is after the instruction (or DAT) then the address is substituted for the label. The two boxes to the left of the LMC are the input to the assemble function and the intermediate output with the labels converted to the correct numbers.
+</p><p>
+You can also put comments into the program (with this implementation). Any line starting with // is ignored by the assembler. (I have put mine at the end so the intermediate output lines up with the input but you can put them anywhere in the program.) The assemble function also looks only for an optional initial label, an instruction code and an address for the instruction if it has one, anything after that is ignored. So you can also put comments after instructions. (The // is optional in this case but good practice.) Beware that if you omit an address you will normally get 0, but if you miss out the address and add a comment you will get an error.
+</p><p>
+The assembler accepts both lower and upper case and for instructions will accept either or a mixture. Note that the case is important for labels, Loop and loop are different labels for example (but not good practice).
+</p><p>
+In addition to using SELECT (see next paragraph), the CPU can be programmed by entering numbers representing the instructions directly into memory, by typing
+into or modifying the assembly language area or by preparing a file containing symbolic instructions which can be loaded into the
+assembly language area. A program called the assembler is then run to convert the assembly language to numbers in memory.
+(Using a file is similar to how I prepared programs on paper tape in 1970 - except it is easier to correct mistakes in Notepad.)
+ To help you, ASSEMBLE is automatically done whenever you change the assembly language area.
+</p><p>
+There is a SELECT button which will allow you to select from the following supplied programs:
+<table style="width: 100%; border-collapse: collapse;" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr valign="top">
+<td style="padding: 0; float: right;" width="50%" ><strong>add</strong></td>
+<td style="padding: 0;" width="75%" >Output the sum of two numbers. Requests input twice.</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+</tr>
+<tr valign="top">
+<td style="padding: 0; float: right;" width="50%" ><strong>add/subtr</strong></td>
+<td style="padding: 0;" width="75%" >Input three numbers. Output the sum of the first two and the third minus the first.</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+</tr>
+<tr valign="top">
+<td style="padding: 0; float: right;" width="50%" ><strong>max</strong></td>
+<td style="padding: 0;" width="75%" >Input two numbers and output the higher.</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+</tr>
+<tr valign="top">
+<td style="padding: 0; float: right;" width="50%" ><strong>is sum 1-n</strong></td>
+<td style="padding: 0;" width="75%" >Test if the input is a triangular number, that is one that is the sum of 1 to a number n. If the number input is the sum of 1 to n, output n otherwise output 0.</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+</tr>
+<tr valign="top">
+<td style="padding: 0; float: right;" width="50%" ><strong>square</strong></td>
+<td style="padding: 0;" width="75%" >Output the square of a number input.</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+</tr>
+<tr valign="top">
+<td style="padding: 0; float: right;" width="50%" ><strong>times table</strong></td>
+<td style="padding: 0;" width="75%" >Input one number and output the times table for that number as far a the number times itself.</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+</tr>
+<tr valign="top">
+<td style="padding: 0; float: right;" width="50%" ><strong>bubble sort</strong></td>
+<td style="padding: 0;" width="75%" >Input upto 20 numbers followed by a zero to start the sort. (I added restart capability to Mike Coley's original.)</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+</tr>
+<tr valign="top">
+<td style="padding: 0; float: right;" width="50%" ><strong>overwrite</strong></td>
+<td style="padding: 0;" width="75%" >Memory overwrite illustrates one of the issues with memory being used for both instructions and data. As the program runs, numbers are INPUT and stored in memory locations 0 onwards. When memory location 10 is reached the instructions in the main program loop start to be overwritten with data, causing the program to stop running correctly as the LMC tries to interpret the data as an instruction. (Mike Coley)</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+</tr>
+<tr valign="top">
+<td style="padding: 0; float: right;" width="50%" ><strong>ascii</strong></td>
+<td style="padding: 0;" width="75%" >ASCII stands for American Standard Code for Information Interchange and is the way of encoding
+characters so they can be stored and manipulated by computers. The original code used the numbers 33 to 126 to represent printable characters and 0-31 and 127 to represent control functions. 32 is used for space and is normally considered a printable character (even though you cannot print it). The only useful control function on the LMC is 10 for newline. This program outputs the numbers 32 to 126 as characters.</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+</tr>
+<tr valign="top">
+<td style="padding: 0; float: right;" width="50%" ><strong>ascii table</strong></td>
+<td style="padding: 0;" width="75%" >Prints a number, a space and then the corresponding character for numbers 32 to 96. Above 99 the 4 characters per line output limit becomes a problem but you could remove the space and change max to go further.</td>
+<td style="padding: 0;" width="5%" >&nbsp;</td>
+</tr>
+</tbody></table>
+</p><p>
+To start using this LMC, I suggest:
+<ul><li><strong>SELECT</strong> a program from the drop down list.</li>
+<li>Click <strong>RUN</strong> to start execution.</li>
+</ul>
+Execution starts at a medium/slow speed and you can use the >> button to speed it up or the &lt;&lt; button to slow it down.
+The lowest five speeds show the flow of execution of an instruction as follows:
+<ul><li><strong>FETCH</strong> Get the contents of the next instruction to be executed. In parallel add 1 to the Program Counter.</li>
+<li><strong>EXECUTE</strong> Decode the instruction loaded and perform the operation requested.</li></ul>
+Note the LMC has to complete the current instruction at speed 5 before it can move to higher speeds (which do not show the flow of execution).
+</p><p>
+You can STOP and RUN again at any point. STOP pauses execution; if the flow of execution is not being shown, the current instruction is completed before stopping. At low speeds the pause is instant and you can press STOP again to finish the current instruction.
+(If you want to abort instantly use RESET.) After a STOP, use RUN or STEP to continue execution.
+</p><p>
+The STEP button does one instruction only (at a slow speed).
+You can RESET to go back to the beginning (which is always with Program Counter = 0 on the LMC) or set the Program Counter to any memory address.
+</p><p>
+You can input into the INPUT box (when the running program requests it) and (when the program is not running) into the individual memory locations, the Program Counter or the Assembly Language area. You cannot alter the Code area or the CPU registers apart from the Program Counter. For memory, the INPUT box and the Program Counter only numbers are accepted.
+</p><p>
+There is no SAVE capability but you can copy and paste from the Assembly Language area into Notepad (or another plain text editor - I prefer SciTE), save a file, change it with the text editor (if you wish) and use LOAD to get the instructions into the LMC. (Note that LOAD is not available on older browser versions or tablets.)
+</p><p>
+The OPTIONS button has some useful features:
+<ul><li><strong>clear memory</strong> put zero into all memory locations. Programs should not rely on this being done.</li>
+<li><strong>show op codes</strong> changes the code display to show the numeric instruction code after its name.</li>
+<li><strong>show decimal</strong> changes the code display to show the memory contents (before the instruction and address).</li>
+<li><strong>hide op codes</strong> changes the code display back to the default of having just the instruction name and address.</li>
+</ul>
+Note that if the code display type is changed the assembler is run to generate the new format.
+</p>
+<h3>Little Man Computer - CPU simulator in JavaScript</h3>
+<p>&copy; 2014 Peter L Higginson (plh256 at hotmail.com)
+</p><p>
+Original graphics background &copy; <a href="http://gcsecomputing.org.uk" target="_blank" >gcsecomputing.org.uk</a>
+and used by permission of Mike Coley.
+I also used his SmallTalk implementation as a starting point. Apart from some of the variable names
+there is little of that left now. However its help is gratefully acknowledged. The idea for the moving blobs to
+illustrate the computer's operation came from Romayne Sorhaindo's "CPU Fetch - Decode - Execute Cycle" project
+on the Computers and Schools web site (<a href="http://computingatschool.org.uk" target="_blank" >computingatschool.org.uk</a>).
+</p><p>
+I debugged this using Chrome so if you get any problems please check whether they appear in Chrome as well. (I would still be interested to hear about browser specific issues and any use made of the project.)
+</p>
+</body>
+</html>

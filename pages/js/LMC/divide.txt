@@ -1,0 +1,52 @@
+        INP
+        STA num1
+        INP
+        STA divisor
+        LDA dot
+        STA marker
+        LDA zero
+        STA count
+loop    LDA count
+        ADD one
+        STA count
+        LDA num1
+        SUB divisor
+        STA num1
+        BRP loop
+        LDA count
+        SUB eleven
+        BRP first
+        ADD num58
+        OTC
+        BRA subseq
+first   ADD ten
+        OUT
+subseq  LDA marker
+        BRZ nodot
+        OTC
+nodot   LDA zero
+        STA marker
+        STA count
+	LDA num1
+        ADD divisor
+        STA remainder
+	ADD remainder
+	STA num2
+	ADD num2
+	ADD remainder
+	STA num2
+	ADD num2
+        STA num1
+        BRA loop
+num1    DAT
+num2    DAT
+divisor DAT
+count   DAT
+one     DAT 1
+remainder DAT
+eleven  DAT 11
+ten     DAT 10
+zero    DAT 0
+dot     DAT 46
+num58   DAT 58
+marker  DAT
