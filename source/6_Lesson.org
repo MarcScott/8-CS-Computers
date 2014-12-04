@@ -151,7 +151,7 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- Write down what happends when you run the simple program. You can use the list below as a start.
+- Write down what happens when you run the simple program. You can use the list below as a start.
   1. The value in the =PROGRAM COUNTER= is sent to =ARITHMETIC UNIT= and to that address in RAM.
   2. The value in the =ARITHMETIC UNIT= is increased by 1 and sent back to the =PROGRAM COUNTER=
   3. The value at address 0 in RAM is sent to the the =INSTRUCTION REGISTER= and the =ADDRESS REGISTER=
