@@ -1,15 +1,16 @@
 #+STARTUP:indent
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="pages/css/styles.css"/>
 #+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
-#+OPTIONS: f:nil author:nil num:nil creator:nil timestamp:nil  
+#+OPTIONS: f:nil author:nil num:nil creator:nil timestamp:nil toc:nil  
 #+TITLE: How Computers Work
 #+AUTHOR: Marc Scott
-
-
 #+BEGIN_HTML
-<div class=ribbon>
-<a href="https://github.com/MarcScott/8-CS-Computers">Fork me on GitHub</a>
-</div>
+  <div class="github-fork-ribbon-wrapper left">
+    <div class="github-fork-ribbon">
+      <a href="https://github.com/MarcScott/8-CS-Computers">Fork me on GitHub</a>
+    </div>
+  </div>
+
 #+END_HTML
 * [[file:pages/1_Lesson.html][Week 1 - Beautiful Binary]]
 :PROPERTIES:
