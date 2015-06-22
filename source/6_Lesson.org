@@ -1,19 +1,17 @@
 #+STARTUP:indent
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
 #+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
-#+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil  
+#+HTML_HEAD_EXTRA: <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+#+HTML_HEAD_EXTRA: <script src="js/navbar.js" type="text/javascript"></script>
+#+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil toc:nil html-style:nil
+
 #+TITLE: How A Computer Works
 #+AUTHOR: Marc Scott
 
 #+BEGIN_HTML
-<div class=ribbon>
-<a href="https://github.com/MarcScott/8-CS-Computers">Fork me on GitHub</a>
-</div>
-#+END_HTML
-#+BEGIN_HTML
   <div class="github-fork-ribbon-wrapper left">
     <div class="github-fork-ribbon">
-      <a href="https://github.com/MarcScott/8-CS-AI">Fork me on GitHub</a>
+      <a href="https://github.com/MarcScott/8-CS-Computers">Fork me on GitHub</a>
     </div>
   </div>
 <div id="stickyribbon">
@@ -30,6 +28,7 @@
     </ul>
   </div>
 #+END_HTML
+
 * COMMENT Use as a template
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
