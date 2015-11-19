@@ -166,6 +166,7 @@ http://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/NOT_from_NAND.svg/240px
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
+- [[http://www.bbc.co.uk/education/clips/zsbdq6f][Click on this link to watch a short video on the introduction to logic gates.]]
 - Look at the diagrams below, showing other NAND gate arrangements. These are called OR, NOR and XOR gates.
 - For each one, draw a Truth Table showing inputs and outputs.
 -----
