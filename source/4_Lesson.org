@@ -124,6 +124,10 @@
 - This last one is called an XOR gate
 #+BEGIN_HTML
 <object data="js/XOR.html" width='200px' height='100px'></object>
+
+<iframe width="560" height="315" src="http://www.bbc.co.uk/education/clips/zsbdq6f" frameborder="0" allowfullscreen></iframe>
+
+
 #+END_HTML
 * A bit of an adder
 :PROPERTIES:
