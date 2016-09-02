@@ -5,7 +5,7 @@
 #+HTML_HEAD_EXTRA: <script src="js/navbar.js" type="text/javascript"></script>
 #+OPTIONS: f:nil author:nil num:1 creator:nil timestamp:nil toc:nil html-style:nil
 #+TITLE: How A Computer Works
-#+AUTHOR: Marc Scott
+#+AUTHOR: Marc Scott updated badge tasks PD
 
 #+BEGIN_HTML
   <div class="github-fork-ribbon-wrapper left">
@@ -93,7 +93,7 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
-To understand a little about how computers work, you'll need to know about binary
+To understand a little about how computers work, you'll need to know about binary.
 ** Learn It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
@@ -193,6 +193,41 @@ It is therefore very probable that the Indo-European, Semitic and Mongolian word
 :HTML_CONTAINER_CLASS: try
 :END:
 - Have a go yourself with the following binary numbers - =1001011=, =1110110=, =11111111=
+** Badge It - Silver
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+- To get you Silver Badge convert the following numbers from binary to denary
+
+*One*
+   
+|128|64|32|16|8  |4 |2 |1 |Total |
+| 0	| 1|0|0  |0  |1 |1 |0 |Ans here |
+
+*Two*
+
+|128|64|32|16|8  |4 |2 |1 |Total |
+| 1  | 0 |0|1|1  |0 |0 |0 | Ans here|
+
+*Three*
+
+|128|64|32|16|8  |4 |2 |1 |Total |
+| 0  | 0 |1 |1|1  |1 |1 |1 | Ans here|
+
+*Four*
+
+|128|64|32|16|8  |4 |2 |1 |Total |
+| 0  | 1 |1 |0 |1  |0 |1 |1 | Ans here|
+
+*Five*
+
+|128|64|32|16|8  |4 |2 |1 |Total |
+| 1  | 0 |0|1|0  |1 |0 |1 | Ans here|	
+
+*Six*
+|0|	1|1|1|1|0|0|1 Ans here|	
+
+
 ** Learn It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
@@ -243,23 +278,60 @@ It is therefore very probable that the Indo-European, Semitic and Mongolian word
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: try
 :END:
-- Have a go yourself with the following denary numbers - =47, 128, 201=
-* Assessment
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: activity
-:END:
-** Badge It - Silver
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: badge
-:END:
-- To get you Silver Badge convert the following numbers from binary to denary
-     - 1001, 1100, 10001, 10101, 1111101, 11001010
+- Have a go yourself with the following practise denary numbers -
+
+*Example A*
+
+|Denary|	128|	64|	32|	16|	8|	4|	2|	1|
+|47	 |||||||||							
+
+*Example B*
+
+|Denary|	128|	64|	32|	16|	8|	4|	2|	1|
+|128 |||||||||								
+
+*Example C*
+
+|Denary|	128|	64|	32|	16|	8|	4|	2|	1|
+|201 |||||||||
+
+
 ** Badge It - Gold
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
 - To get your Gold Badge convert the following numbers from denary to binary
-  - 9, 22, 45, 125, 201, 254, 300
+
+*One*
+  
+|Denary|	128|	64|	32|	16|	8|	4|	2|	1|
+|97	|||||||||							
+
+*Two*
+
+|Denary|	128|	64|	32|	16|	8|	4|	2|	1|
+|134|||||||||								
+
+*Three*
+
+|Denary|	128|	64|	32|	16|	8|	4|	2|	1|
+|230|||||||||								
+
+*Four*
+- =21=
+*Five*
+- =49=
+*Six*
+- =17=
+*Seven*
+- =183=
+*Eight*
+- =200=
+
+* Adding in Binary
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: activity
+:END:
 ** Badge It - Platinum
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge

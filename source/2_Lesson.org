@@ -109,6 +109,9 @@
 <object data="js/transistor.html" width='200px' height='200px'></object>
 #+END_HTML
 - As mentioned in the previous lesson, a transistor can act like a switch. When there is current entering the Base(=B=) of the transistor, current is allowed to flow through the Collector(=C=) to the Emitter(=E=).
+#+BEGIN_HTML
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IcrBqCFLHIY" frameborder="0" allowfullscreen></iframe>
+#+END_HTML
 ** Try It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: try
