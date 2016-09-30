@@ -119,6 +119,8 @@ for the JavaScript code in this tag.
 </li>
 </ul>
 <object data="js/XOR.html" width='200px' height='100px'></object>
+
+<iframe width="560" height="315" src="http://www.bbc.co.uk/education/clips/zsbdq6f" frameborder="0" allowfullscreen></iframe>
 </div>
 </div>
 </div>
@@ -330,23 +332,23 @@ for the JavaScript code in this tag.
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #a020f0;">def</span> <span style="color: #0000ff;">AND</span>(A,B):
-    <span style="color: #a020f0;">return</span> A <span style="color: #a020f0;">and</span> B
+<pre class="src src-python">def AND(A,B):
+    return A and B
 
-<span style="color: #a020f0;">def</span> <span style="color: #0000ff;">OR</span>(A,B):
-    <span style="color: #a020f0;">return</span> A <span style="color: #a020f0;">or</span> B
+def OR(A,B):
+    return A or B
 
-<span style="color: #a020f0;">def</span> <span style="color: #0000ff;">NOT</span>(A):
-    <span style="color: #a020f0;">return</span> 1 - A
+def NOT(A):
+    return 1 - A
 
-<span style="color: #a020f0;">def</span> <span style="color: #0000ff;">NOR</span>(A,B):
-    <span style="color: #a020f0;">return</span> 1-(A <span style="color: #a020f0;">or</span> B)
+def NOR(A,B):
+    return 1-(A or B)
 
-<span style="color: #a020f0;">def</span> <span style="color: #0000ff;">NAND</span>(A,B):
-    <span style="color: #a020f0;">return</span> 1 - (A <span style="color: #a020f0;">and</span> B)
+def NAND(A,B):
+    return 1 - (A and B)
 
-<span style="color: #a020f0;">def</span> <span style="color: #0000ff;">XOR</span>(A,B):
-    <span style="color: #a020f0;">return</span> A ^ B
+def XOR(A,B):
+    return A ^ B
 </pre>
 </div>
 <ul class="org-ul">
@@ -371,32 +373,32 @@ for the JavaScript code in this tag.
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #a0522d;">inputA</span> = 0
-<span style="color: #a0522d;">inputB</span> = 0
+<pre class="src src-python">inputA = 0
+inputB = 0
 
-<span style="color: #a020f0;">def</span> <span style="color: #0000ff;">AND</span>(A,B):
-    <span style="color: #a020f0;">return</span> A <span style="color: #a020f0;">and</span> B
+def AND(A,B):
+    return A and B
 
-<span style="color: #a020f0;">def</span> <span style="color: #0000ff;">OR</span>(A,B):
-    <span style="color: #a020f0;">return</span> A <span style="color: #a020f0;">or</span> B
+def OR(A,B):
+    return A or B
 
-<span style="color: #a020f0;">def</span> <span style="color: #0000ff;">NOT</span>(A):
-    <span style="color: #a020f0;">return</span> 1 - A
+def NOT(A):
+    return 1 - A
 
-<span style="color: #a020f0;">def</span> <span style="color: #0000ff;">NOR</span>(A,B):
-    <span style="color: #a020f0;">return</span> 1-(A <span style="color: #a020f0;">or</span> B)
+def NOR(A,B):
+    return 1-(A or B)
 
-<span style="color: #a020f0;">def</span> <span style="color: #0000ff;">NAND</span>(A,B):
-    <span style="color: #a020f0;">return</span> 1 - (A <span style="color: #a020f0;">and</span> B)
+def NAND(A,B):
+    return 1 - (A and B)
 
-<span style="color: #a020f0;">def</span> <span style="color: #0000ff;">XOR</span>(A,B):
-    <span style="color: #a020f0;">return</span> A ^ B
+def XOR(A,B):
+    return A ^ B
 
-<span style="color: #a0522d;">output</span> = XOR(inputA,inputB)
-<span style="color: #a0522d;">carry</span> = AND(inputA,inputB)
+output = XOR(inputA,inputB)
+carry = AND(inputA,inputB)
 
-<span style="color: #483d8b;">print</span>(<span style="color: #8b2252;">'result ='</span>,output)
-<span style="color: #483d8b;">print</span>(<span style="color: #8b2252;">'carry ='</span>,carry)
+print('result =',output)
+print('carry =',carry)
 </pre>
 </div>
 </div>
@@ -425,9 +427,9 @@ for the JavaScript code in this tag.
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #a0522d;">D</span> = AND(inputA,inputB)
-<span style="color: #a0522d;">E</span> = NOR(inputA,inputB)
-<span style="color: #a0522d;">outputF</span> = XOR(D,E)
+<pre class="src src-python">D = AND(inputA,inputB)
+E = NOR(inputA,inputB)
+outputF = XOR(D,E)
 </pre>
 </div>
 <ul class="org-ul">
@@ -466,7 +468,7 @@ for the JavaScript code in this tag.
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="validation"></p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
 </html>

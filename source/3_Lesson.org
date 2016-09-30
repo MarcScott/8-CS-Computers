@@ -120,7 +120,11 @@
 #+BEGIN_HTML
 <object data="js/ANDfromNANDS.html" width='300px' height='100px'></object>
 #+END_HTML
-- This is called an AND gate
+- This is called an AND gate.
+
+- [[http://logic.ly/demo/][Here]] is an online gate builder which is a nice way to visualise what is happening.
+
+
 * Assessment
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
@@ -137,7 +141,7 @@ http://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/NOT_from_NAND.svg/240px
 | 0 |   |
 | 1 |   |
 
-* Making other gates from NAND gates.
+* Making other gates from NAND gates
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
@@ -166,17 +170,18 @@ http://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/NOT_from_NAND.svg/240px
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
+- [[http://www.bbc.co.uk/education/clips/zsbdq6f][Click on this link to watch a short video on the introduction to logic gates.]]
 - Look at the diagrams below, showing other NAND gate arrangements. These are called OR, NOR and XOR gates.
 - For each one, draw a Truth Table showing inputs and outputs.
 -----
 - OR gate
-[[http://upload.wikimedia.org/wikipedia/commons/thumb/9/90/OR_from_NAND.svg/400px-OR_from_NAND.svg.png]]
+http://www.bbc.co.uk/staticarchive/d54b529f27568c81cca1caff755793f853e9cd4e.gif
 -----
 - NOR gate
-[[http://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/NOR_from_NAND.svg/560px-NOR_from_NAND.svg.png]]
+https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/NOR_ANSI_Labelled.svg/220px-NOR_ANSI_Labelled.svg.png
 -----
 - XOR gate
-http://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/XOR_from_NAND.svg/600px-XOR_from_NAND.svg.png
+https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Xor-gate-en.svg/320px-Xor-gate-en.svg.png
 
 * Assessment
 :PROPERTIES:
